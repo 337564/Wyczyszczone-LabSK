@@ -1,4 +1,4 @@
-# Dowód logowania się ze stacji Windos na maszynę nas bez hasła:
+# Dowód logowania się ze stacji Windows na maszynę nas bez hasła:
 
 ~ > cat .ssh\id_ed25519.pub
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID17sHqvB29xD+FpD9KHyX7fHTrjhHQhl+XiPqHcNVFx ato@erg

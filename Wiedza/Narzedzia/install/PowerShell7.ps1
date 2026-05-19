@@ -1,6 +1,6 @@
 <#
 .Synopsis 
-    Install PowerShell 7 on WIndows 11
+    Install PowerShell 7 on Windows 11
 .Description 
     Przy pomocy winget
 .Link 
