@@ -2,7 +2,7 @@
 
 ## Cel ćwiczenia
 
-Ćwiczenie dotyczy złożenia kilku elementów w działającą usługę: zapory, kontenera albo maszyny wirtualnej, usługi siećiowej oraz prywatnej sieći dostępowej.
+Ćwiczenie dotyczy złożenia kilku elementów w działającą usługę: zapory, kontenera albo maszyny wirtualnej, usługi sieciowej oraz prywatnej sieci dostępowej.
 
 Zakres:
 
@@ -27,7 +27,7 @@ sudo nft list ruleset
 sudo systemctl status nftables
 ```
 
-Na Windows sprawdzaj reguły zapory i profile siećiowe:
+Na Windows sprawdzaj reguły zapory i profile sieciowe:
 
 ```powershell
 Get-NetFirewallRule
@@ -47,7 +47,7 @@ curl http://localhost:8080/
 
 W Incusie można uruchamiać kontenery systemowe albo obrazy OCI, zależnie od konfiguracji hosta.
 
-## Podłączenie chmury do sieći prywatnej
+## Podłączenie chmury do sieci prywatnej
 
 Serwer w chmurze może mieć publiczny adres tylko do administracji i jednocześnie adres prywatny w ZeroTier/Tailscale. Dzięki temu usługi laboratoryjne nie muszą być wystawione publicznie.
 
@@ -62,7 +62,7 @@ tailscale status 2>/dev/null || true
 
 ## Przykładowy dziennik Azure
 
-W katalogu [materialy/](materialy/) zachowano przykładowy dziennik studenta z maszyny Ubuntu w Azure. Jest przydatny jako wzorzec tego, jakie informacje pokazać w sprawozdaniu: adresy interfejsów, trasy, sieći ZeroTier, Docker/Incus i testy dostępności.
+W katalogu [materialy/](materialy/) zachowano przykładowy dziennik studenta z maszyny Ubuntu w Azure. Jest przydatny jako wzorzec tego, jakie informacje pokazać w sprawozdaniu: adresy interfejsów, trasy, sieci ZeroTier, Docker/Incus i testy dostępności.
 
 ## Pliki w tym katalogu
 

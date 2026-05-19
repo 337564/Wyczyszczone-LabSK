@@ -80,7 +80,7 @@ tracert 8.8.8.8
 
 ## Przekazywanie pakietów
 
-Na zwykłym komputerze przekazywanie pakietów jest standardowo wyłączone, ponieważ host końcowy nie powinien przypadkowo działać jak router. Włączenie routingu bez świadomej konfiguracji może utworzyć niekontrolowaną ścieżkę między siećiami i utrudnić diagnostykę albo bezpieczeństwo.
+Na zwykłym komputerze przekazywanie pakietów jest standardowo wyłączone, ponieważ host końcowy nie powinien przypadkowo działać jak router. Włączenie routingu bez świadomej konfiguracji może utworzyć niekontrolowaną ścieżkę między sieciami i utrudnić diagnostykę albo bezpieczeństwo.
 
 Linux:
 

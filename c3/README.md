@@ -2,7 +2,7 @@
 
 ## Cel ćwiczenia
 
-Ćwiczenie łączy administrację adresami IP z obserwacją rzeczywistego ruchu siećiowego. Najważniejsze jest nie tylko uruchomić polecenia, ale umieć wyjaśnić, jaki pakiet pojawił się w sieći i dlaczego.
+Ćwiczenie łączy administrację adresami IP z obserwacją rzeczywistego ruchu sieciowego. Najważniejsze jest nie tylko uruchomić polecenia, ale umieć wyjaśnić, jaki pakiet pojawił się w sieci i dlaczego.
 
 Zakres:
 
@@ -14,7 +14,7 @@ Zakres:
 
 ## ARP
 
-ARP mapuje adres IPv4 na adres MAC w lokalnej sieći L2. Host, który zna docelowy adres IPv4, ale nie zna MAC, wysyła zapytanie broadcast: „kto ma ten adres IP?”. Właściciel adresu odpowiada swoim MAC.
+ARP mapuje adres IPv4 na adres MAC w lokalnej sieci L2. Host, który zna docelowy adres IPv4, ale nie zna MAC, wysyła zapytanie broadcast: „kto ma ten adres IP?”. Właściciel adresu odpowiada swoim MAC.
 
 Przydatne polecenia:
 

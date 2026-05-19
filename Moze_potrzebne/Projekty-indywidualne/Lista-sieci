@@ -22,7 +22,7 @@
    z uwiezytelnieniem WPA-personal (wspolne haslo)
 
 7. Konfiguracja systemu FreeBSD na maszynie soekris jako punktu dostepowego wifi
-   z uwiezytelnieniem WPA-corporate (oddzielne hasla uzytkownikow z serwera radius na volcie)
+   z uwierzytelnieniem WPA-corporate (oddzielne hasła użytkowników z serwera radius na volcie)
 
 8. Konfiguracja  systemu FreeBSD jako detektora obecnosci urzadzenia bluetooth
    (ang. proximity detector)

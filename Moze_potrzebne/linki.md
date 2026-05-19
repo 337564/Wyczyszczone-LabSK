@@ -7,7 +7,7 @@
 - [Network Protocols and Architecture](https://www.coursera.org/learn/network-protocols-architecture)
 - [Katalog DOC+NET na ftp2.zet.pw.edu.pl](http://ftp2.zet.pw.edu.pl/pub/DOC/NET/)
 - [Computer Networks   Electrical Engineering and Computer Science   MIT OpenCourseWare](http://nas2/pub/Doc/NET/Kursy/MIT%20-%20Computer%20Networks/)
-- [PG - Laboratoria sieći komputerowych](http://kti.eti.pg.gda.pl/ktilab/index2020lato.html)
+- [PG - Laboratoria sieci komputerowych](http://kti.eti.pg.gda.pl/ktilab/index2020lato.html)
 - [SK Moduł 1 - Studia Informatyczne](http://wazniak.mimuw.edu.pl/index.php?title=SK_Modu%C5%82_1)
 - [Sieci komputerowe - Przedmioty - USOSWEB PW](https://usosweb.usos.pw.edu.pl/kontroler.php?_action=katalog2/przedmioty/pokazPrzedmiot&kod=103A-INxxx-IWP-SIEKO)
 - [Internet of Things Intro Course I Stanford Online](https://online.stanford.edu/courses/xee100-introduction-internet-things)
@@ -35,7 +35,7 @@
 
 ## Symulacja
 - [Cisco Packet Tracer - Networking Simulation Tool](https://www.netacad.com/courses/packet-tracer)
-- [Cisco Packet Tracer - routing – SOISK systemy operacyjne i sieći komputerowe](https://www.soisk.info/index.php/Cisco_Packet_Tracer_-_routing)
+- [Cisco Packet Tracer - routing – SOISK systemy operacyjne i sieci komputerowe](https://www.soisk.info/index.php/Cisco_Packet_Tracer_-_routing)
 - [Konfiguracja EVE-NG w Google Cloud Platform - Inna sieć](https://innasieć.pl/konfiguracja-eve-ng-w-google-cloud-platform/)
 - [TOP3 programy do wirtualnego labowania - Inna sieć](https://innasieć.pl/top3-programy-do-wirtualnego-labowania/)
 

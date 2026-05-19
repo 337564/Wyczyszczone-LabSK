@@ -4,7 +4,7 @@ Ten katalog zawiera materiały przydatne w wielu ćwiczeniach albo zbyt ogólne,
 
 ## Najważniejsze podkatalogi
 
-- [Praca_w_labie](Praca_w_labie/README.md) — praca lokalna, praca zdalna, naprawa sieći i grafiki.
+- [Praca_w_labie](Praca_w_labie/README.md) — praca lokalna, praca zdalna, naprawa sieci i grafiki.
 - [Wyklady](Wyklady/README.md) — aktualne slajdy wykładowe oraz krótki indeks tematów.
 - [Egzamin](Egzamin/README.md) — przykładowe pytania egzaminacyjne przepisane do Markdown.
 - [Wireshark](Wireshark/README.md) — ściągi `tcpdump` i filtrów Wiresharka.

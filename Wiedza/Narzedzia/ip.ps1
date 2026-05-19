@@ -96,7 +96,7 @@ function getHelp {
 	Write-Host 'arg:
   l : interfejsy Get-Netadapter    l*
   w : interfejsy WireGuard
-  z : interfejsy Zerotier
+  z : interfejsy ZeroTier
   a : adressy    Get-NetIPAddress  a*
   n : sąsiedzi   Get-NetNeighbor   n*
   r : trasy      Get-NetRoute      r*
@@ -299,7 +299,7 @@ function Map-ZeroTier {							# Map network Id to Description $bin/Test/ZeroTier
 	return 'ZeroTier ' + (Get-ZTNetwork $Id ).Config.Name	# Net Name
 }
 # TODO dynamicznie:
-function Map-Zerotier2 ($NetId) {				# Bez uzycia modułu ZeroTierController
+function Map-Zerotier2 ($NetId) {				# Bez użycia modułu ZeroTierController
 	$Map = {
 		ebe7fbd445c277b3  = 'ZET'
 		ebe7fbd445c277b3  = 'ZET2'				# Kontroler na s2
@@ -510,7 +510,7 @@ $Args | ForEach-Object { Info "<$_>" -f Y
 		'h*' { $cmd = 'h' }
 		'l*' { $cmd = 'l' }				# Link
 		'w*' { $cmd = 'w' }				# Wireguard
-		'z*' { $cmd = 'z' }				# Zerotier
+		'z*' { $cmd = 'z' }				# ZeroTier
 		'a*' { $cmd = 'a' }				# Address
 		'r*' { $cmd = 'r' }				# Route
 		'r2' { $cmd = 'r2' }			# route print
@@ -528,7 +528,7 @@ if ($Help) { getHelp ; return }
 switch ($cmd) {
 	'l' { $cmd = { Get-Links } }
 	'w' { gsudo wg ; return }
-	'z' { zerotier-cli listnetworks ; return }	# Get-Zerotier
+	'z' { zerotier-cli listnetworks ; return }	# Get-ZeroTier
 	'a' { $cmd = { Get-Address } }
 	'n' { $cmd = { Get-Neighbor } }
 	'r' { $cmd = { Get-Routes } }

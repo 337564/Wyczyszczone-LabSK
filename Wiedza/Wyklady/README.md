@@ -12,7 +12,7 @@ Zachowano aktualne PDF-y z katalogu `Wykład`. Nie przepisywano dużych slajdów
 6. `2c Adresacja.pdf` — MAC, IPv4, IPv6, unicast, multicast, broadcast, CIDR.
 7. `3b Protokoły.pdf` — ARP, RARP, ICMP, IP, DHCP, UDP, TCP.
 8. `4 Porty Serwisy Monitorowanie.pdf` — porty, kanał wirtualny, usługi, monitorowanie ruchu.
-9. `5 Trasowanie.pdf` — urządzenia siećiowe, tablice tras, routery, traceroute.
+9. `5 Trasowanie.pdf` — urządzenia sieciowe, tablice tras, routery, traceroute.
 10. `6 Maszyny wirtualne.pdf` — VM i kontenery jako środowisko laboratoryjne.
 11. `7 Sieci virtualne.pdf` — VLAN, VPN, tunele, izolacja.
 12. `8 Serwisy.pdf` — DNS i inne podstawowe usługi.
