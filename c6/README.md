@@ -67,5 +67,5 @@ W katalogu [materialy/](materialy/) zachowano przykładowy dziennik studenta z m
 ## Pliki w tym katalogu
 
 - [materialy/azure-przykladowy-dziennik-studenta.md](materialy/azure-przykladowy-dziennik-studenta.md) — przykład przebiegu pracy.
-- `materialy/docker.md`, `materialy/azure.md`, `materialy/nftables.md` — notatki z poprzednich wersji ćwiczenia, zachowane jako przydatne materiały.
+- [materialy/docker.md](materialy/docker.md), [materialy/azure.md](materialy/azure.md), [materialy/nftables.md](materialy/nftables.md) — notatki z poprzednich wersji ćwiczenia, zachowane jako przydatne materiały.
 - [linki.md](linki.md) — odnośniki do Incus, Azure CLI i `nftables`.
