@@ -109,6 +109,6 @@ Sens zadania: połączyć SSH, skryptowanie i odczyt adresów warstwy 2 oraz 3. 
 
 ## Pliki w tym katalogu
 
-- `schematy/` — zachowane diagramy i grafiki potrzebne do zrozumienia topologii.
-- `zadania/` — bieżące wejściówki i zadania.
+- [schematy/](schematy/) — zachowane diagramy i grafiki potrzebne do zrozumienia topologii.
+- [zadania/](zadania/) — bieżące wejściówki i zadania.
 - [linki.md](linki.md) — linki źródłowe dotyczące adresacji i warstw.

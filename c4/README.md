@@ -115,4 +115,4 @@ Najważniejsza zasada kosztowa: po zajęciach usuwać maszynę (`az vm delete`),
 - [DNS.md](DNS.md) — pełniejsza notatka o DNS, mDNS, LLMNR i `systemd-resolved`.
 - [azure-linux-vm.md](azure-linux-vm.md) — instrukcja maszyny Linux w Azure.
 - `schematy/trasowanie.drawio` — diagram trasowania.
-- `materialy/` — zrzuty i przykłady diagnostyczne.
+- [materialy/](materialy/) — zrzuty i przykłady diagnostyczne.

@@ -86,5 +86,5 @@ gcloud compute instances list
 ## Pliki w tym katalogu
 
 - `schematy/ADM.drawio` — schemat sieći administracyjnej.
-- `zadania/` — zachowane wersje zadania z grup.
+- [zadania/](zadania/) — zachowane wersje zadania z grup.
 - [materialy/google-cloud.md](materialy/google-cloud.md) — analogie `az` ↔ `gcloud`.
