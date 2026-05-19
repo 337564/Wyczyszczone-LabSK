@@ -178,6 +178,6 @@ Przy problemach ze stacją użyj alternatywnych nazw i adresów:
 
 ## Pliki w tym katalogu
 
-- `skrypty/` — przykłady skryptów z oryginalnych materiałów.
-- `zadania/` — zachowane zadania i wejściówki, zduplikowane wersje historyczne usunięto.
+- [skrypty/](skrypty/) — przykłady skryptów z oryginalnych materiałów.
+- [zadania/](zadania/) — zachowane zadania i wejściówki, zduplikowane wersje historyczne usunięto.
 - [linki.md](linki.md) — zebrane odnośniki źródłowe.

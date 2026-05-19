@@ -62,7 +62,7 @@ tailscale status 2>/dev/null || true
 
 ## Przykładowy dziennik Azure
 
-W katalogu `materialy/` zachowano przykładowy dziennik studenta z maszyny Ubuntu w Azure. Jest przydatny jako wzorzec tego, jakie informacje pokazać w sprawozdaniu: adresy interfejsów, trasy, sieći ZeroTier, Docker/Incus i testy dostępności.
+W katalogu [materialy/](materialy/) zachowano przykładowy dziennik studenta z maszyny Ubuntu w Azure. Jest przydatny jako wzorzec tego, jakie informacje pokazać w sprawozdaniu: adresy interfejsów, trasy, sieći ZeroTier, Docker/Incus i testy dostępności.
 
 ## Pliki w tym katalogu
 
