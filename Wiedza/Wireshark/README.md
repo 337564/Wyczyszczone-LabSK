@@ -20,4 +20,4 @@ bootp          # DHCP w Wiresharku bywa oznaczony jako BOOTP/DHCP
 udp.port == 67 || udp.port == 68
 ```
 
-Zachowano dwie ściągi PacketLife: `Wireshark_Display_Filters.pdf` i `tcpdump.pdf`. Są krótkie i graficzne, dlatego nie przepisywano ich w całości; indeks powyżej zawiera najczęściej używane fragmenty dla laboratoriów.
+Zachowano dwie ściągi PacketLife: [`Wireshark_Display_Filters.pdf`](Wireshark_Display_Filters.pdf) i [`tcpdump.pdf`](tcpdump.pdf). Są krótkie i graficzne, dlatego nie przepisywano ich w całości; indeks powyżej zawiera najczęściej używane fragmenty dla laboratoriów.
