@@ -1,0 +1,59 @@
+
+LabSK - c1
+Zadanie gr poniedziak 10:15
+
+1. Logowanie sie bez hasla ze stacji na volta
+   test:  ssh loginid_na volcie@vol w
+
+2. Skrypt do instalacji serwisu ssh na stacji Ubuntu (lub ArchLinux):
+   ~/bin/install-sshd
+
+   #!/bin/sh
+   sudo apt-get update
+   sudo apt-get install openssh-server -y
+   sudo systemctl start sshd
+   sudo systemctl status sshd
+
+   W systemie ArchLinux:
+
+   sudo pacman -Syu
+   sudo pacman -Sy install openssh-server
+   sudo systemctl start sshd
+   sudo systemctl status sshd
+
+3. Skrypt do reperacji DNS (Domain Name System) na staji Ubuntu:
+
+   Kroki wykonane recznie:
+   1. Sprawdzenie czy DNS dziala:
+      ping -c1 vol
+   2. Identyfikacja nazwy interfejsu sieciowego w sieci 10.146.* :
+      ip -br a
+   3. Reperacja pliku /etc/resolv.conf:
+      sudo dhclient -v $interfejs
+
+   4. Weryfikacja jak w p.1
+
+   Skrypt:  ~/bin/dns-ubuntu:
+
+   #!/bin/sh
+   samodzielnie skrypt
+
+4. Generacja kluczy ed25519 na volcie i logowanie sie z ich uzyciem z volta na stacje:
+   test:  ssh .........
+
+5. Logowanie sie na volta jak w p.1 po zmianie kluczy volta przez administratora volta
+   Napisac polecenie sluzace do usuniecia niektualnego (starego) klucza maszyny 
+
+   test: przez logowanie sie na stacje z volta po zmianie kluczy serwera sshd na stacji:
+
+   1. Test poczatkowy (z vota):
+   ssh stud@stacja  w
+
+   2. Podmiana kluczy serwera na stacji:
+
+   sudo systemctl stop sshd   # Stopujemy serwis
+   sudo rm /etc/ssh/*key*	# Kasujemy Klucze serwera
+   sudo ssh-keygen -A 		# Generujemy nowe klucze serwera
+
+   3. Test koncowy (z vota):
+   ssh stud@stacja  w

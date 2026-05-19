@@ -1,0 +1,10 @@
+LabSK  - c5 - gr. piątek. 12 NP
+Zadanie zad 3p.
+
+Na maszynie e4 napisać skrypt gen-www który:
+wykreuje własna maszyn w chmurze,  uruchomi na niej dowolny serwer www i sprawdzi, że dziła.
+Skrypt nie może wymagać interakcji z użytkownikiem - jest całkowicie automatyczny.
+Przykład użycia:
+   cd /tmp
+   gen-www
+Skrypt musi być maksymalnie prosty - minimalna liczba linii i znaków !

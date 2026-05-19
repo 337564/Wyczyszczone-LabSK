@@ -1,0 +1,3 @@
+Podręcznik on-line:
+
+http://www.freebsd.org/cgi/man.cgi?query=ifconfig

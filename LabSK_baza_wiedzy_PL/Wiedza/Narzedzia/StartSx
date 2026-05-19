@@ -1,0 +1,46 @@
+#!/bin/sh
+# StartSx
+# Konfiguracja początkowa maszyny s? po jej resecie.
+#
+# Maszyny są często resetowane aby skasować pozostałości pracy innych osób.
+# Maszyny są bezdyskowe i po resecie tracone są wszystkie pliki na nich.
+# Dlatego na początku pracy wymagane są zawsze trzy elementarne kroki:
+#
+#  1. Zamontowanie dysku sieciowego w katalogu /pub
+#  2. Instalacja oprogramowania (zsh, sudo, ...)
+#  3. Skopiowanie własnego konta na stację.
+#
+# Kolejność kroków jest krytyczna i każdy krok wymaga poprawnego ukończenia kroku poprzedniego.
+# Przykładowe weryfikacje opisane są w pliku "c2/zadanie-1.txt"
+# ato 2021
+
+# Użycie:
+#   StartSx                       # nazwa stacji w pliku ~/.s
+#   StartSx stacja                # argument
+#   s=stacja StarSx						    # zmienna środowiskowa
+#   export s=stacja ; StarSx      # zmienna środowiskowa globalna
+# Kolejność puszukiwania: argument, środowisko, plik, interakcja
+
+# START
+
+PROG=${0##*/}			# Nazwa skryptu
+
+s=${1:-$s}			# Stacja docelowa z argumentu lub ze środowiska
+
+[ "$s" ] || s=$(cat ~/.s 2>/dev/null)	# Nazwa w pliku
+[ "$s" ] || read -p "nazwa stacji: " s	# Interakcyjne wczytanie
+[ "$s" ] || { echo "użycie: $PROG stacja" ; exit 1 ;}
+
+[ "${-#*x*}" != "$-" ] && x=-x	# Jeśli wywołany ze śledzeniem (sh -x skrypt)
+
+set -e				# Stop po błędzie
+
+ssh-keygen -R $s 2>/dev/null	# Lub na stałe w .ssh/config
+
+ssh-keyexport root@$s		# Opcjonalnie
+
+ssh root@$s "mount -o emptydir /pub ; /pub/FreeBSD/zetis/bin/config/Start $x"
+
+copy-user $x -e $s		# Skopiowanie swojego konta na $s
+
+exit

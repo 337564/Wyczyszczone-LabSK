@@ -1,0 +1,46 @@
+
+% host -t A vol
+vol.zet.pw.edu.pl has address 10.146.146.3
+
+% host -t AAAA vol
+vol.zet.pw.edu.pl has no AAAA record
+
+% host -t SOA zet.pw.edu.pl
+zet.pw.edu.pl has SOA record volt.zet.pw.edu.pl. hostmaster.zet.pw.edu.pl. 51 3600 900 604800 3600
+
+% host -t NS zet.pw.edu.pl
+zet.pw.edu.pl name server europa.coi.pw.edu.pl.
+zet.pw.edu.pl name server volt.zet.pw.edu.pl.
+zet.pw.edu.pl name server amper.zet.pw.edu.pl.
+zet.pw.edu.pl name server io.coi.pw.edu.pl.
+
+% host -t MX zet.pw.edu.pl
+zet.pw.edu.pl mail is handled by 10 volt.zet.pw.edu.pl.
+zet.pw.edu.pl mail is handled by 20 amper.zet.pw.edu.pl.
+
+% host -t TXT zet.pw.edu.pl
+zet.pw.edu.pl descriptive text "google-site-verification=XygfTUD-jAGecWdklg5VgjHhMhmzc2aJQInNHkxoIQc"
+zet.pw.edu.pl descriptive text "v=spf1 a mx a:volt.zet.pw.edu.pl a:amper.zet.pw.edu.pl ~all"
+
+% host -t any volt
+volt.zet.pw.edu.pl has address 194.29.146.3
+volt.zet.pw.edu.pl has SSHFP record 3 2 4AB584573F7750239AF5679656C34B60CDD1481BDB2A73D7D27AA9C2 897D8484
+volt.zet.pw.edu.pl has SSHFP record 1 2 8211F185C94479F67FB0150CFA15452AB39CEA87CF0B27EBE13B5D3B 8C8117AF
+volt.zet.pw.edu.pl has SSHFP record 2 2 89E299BD84A84802CC27ABF442D08E17AA468DB633E504F6E1EBA9F0 5E8A96EF
+
+stud@s1 ~ % getent ahosts volt
+Addr.		Socket type  Canonical name
+194.29.146.3    STREAM       volt.zet.pw.edu.pl
+194.29.146.3    DGRAM
+194.29.146.3    RAW
+
+Typy gnizdek (socket type):
+ - SOCK_STREAM type, providing reliable, two-way, connection-based byte streams.
+ - SOCK_DGRAM type, supporting datagrams (connectionless, unreliable messages of a fixed maximum length).
+ - SOCK_RAW type, providing raw network protocol access.
+
+Canonical name: (nazwa kanoniczna) if present, is the canonical name of the host.
+
+Programy:
+  Linux: host, nslookup, dig
+  Win: Resolve-DnsName, gcm *DNS*

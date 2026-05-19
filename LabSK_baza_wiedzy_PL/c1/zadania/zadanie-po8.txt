@@ -1,0 +1,38 @@
+LabSK - c1
+Zadanie gr poniedziałek 10:30
+
+1. Logowanie się bez hasła ze stacji na volta
+   test:  ssh login_na_volcie@vol w
+
+2. Skrypt do instalacji serwisu ssh na stacji Ubuntu:
+   ~/bin/install-sshd
+
+   #!/bin/sh
+   sudo apt-get update
+   sudo apt-get install openssh-server -y
+   sudo systemctl start sshd
+   sudo systemctl status sshd
+
+3. Skrypt do reperacji DNS (Domain Name System) na stacji Ubuntu:
+
+   Kroki wykonane ręcznie:
+   1. Sprawdzenie czy DNS działa:
+      ping -c1 vol
+   2. Identyfikacja nazwy interfejsu sieciowego w sieci 10.146.* :
+      ip -br a
+   3. Reperacja pliku /etc/resolv.conf:
+      sudo dhclient -v $interfejs
+
+   4. Weryfikacja jak w p.1
+
+   Skrypt:  ~/bin/dns-ubuntu:
+
+   #!/bin/sh
+   samodzielnie skrypt
+
+4. Generacja kluczy ed25519 na volcie i logowanie się z ich użyciem z volta na stacje:
+
+   test:  ssh .........
+
+
+5. Logowanie się na volta jak w p.1 po zmianie kluczy volta przez administratora volta

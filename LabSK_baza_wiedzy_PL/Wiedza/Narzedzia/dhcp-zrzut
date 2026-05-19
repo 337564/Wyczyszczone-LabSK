@@ -1,0 +1,108 @@
+#!/bin/sh
+# Zdjęcie ruchu DHCP
+# ArchLinux
+# ato 2022
+
+# Użycie:
+#  dhcp-zrzut gen
+#  dhcp-zrzut test
+#  dhcp-zrzut dump
+#  dhcp-zrzut list
+#
+# Uwagi:
+#  man dhclient
+#  tcpdump-a nie da się starować na interfejsie w stanie DOWN
+#  dhcpcd jest drugim (gorszym?) wariantem startowania protokpołu DHCP na interfejsie
+
+dev=eth1			# Interfejs na stacji s1..9
+
+scr=dhcp.sh			# Skrypt
+log=dhcp.log			# Dziennk skryptu
+cap=dhcp.pcap			# Zrzut ruchu
+
+LEASES=/var/lib/dhclient/dhclient.leases
+
+Link_reset () {			# Reset interfejsu DEV
+  ip addr flush dev $dev	# Zdjęcie adresu
+  #ip -br a show dev $dev
+}
+
+Gen () {			# Generacja skryptu SRC
+  cat > $scr <<EOF
+#!/bin/sh
+# Skrypt wołany przez dhcpcd
+exec >> $log 2>&1
+date +%T
+export                          # Dostarczone zmienne
+#echo "pid=\$pid PPID=\$PPID"  	# Identyczne
+#pstree -p \$PPID ; ps l
+sleep 5
+kill \$pid
+cat $log
+exit 0
+EOF
+  chmod +x $scr
+  cp /dev/null $log		# Wyzerowanie
+  cp /dev/null $cap
+  List
+  exit
+}
+
+Test () {			 # Test
+  Link_reset
+  dhclient -1 -d -n -sf $scr $dev
+  #dhcpcd -1 -B --noconfigure $dev # Wariant
+}
+
+Dump () { 			# Zrzut:
+  Link_reset
+  tcpdump -i $dev -w $cap 'port 67 or port 68' &
+  dhclient -1 -d -n -sf $scr $dev
+  #sleep 5 ; kill $!
+  tcpdump -r $cap
+}
+
+List () {
+  L=
+  for f in $scr $log $cap $LEASES ; do
+    [ -f $f ] && L="$L $f"	# Może nie być
+  done
+  ls -l --color $L
+  exit
+}
+
+Show () { # opcje		# Pokaż zawartość
+  warn -B $LEASES
+  cat $LEASES
+  warn -B $cap
+  tcpdump -r $cap $*
+  exit
+}
+
+. ZLIB				# fatal
+
+# START
+
+case "$1" in
+ g|gen) Gen ;;
+t|test) cmd=Test ;;
+d|dump) cmd=Dump ;;
+l|list) List ;;
+s|show) Show ;;
+esac
+
+[ "$USER" = "root" ] || fatal 'jako root'
+
+$cmd $*
+
+exit
+#------------------------------------------------
+stud@s4 ~ % sudo sh -c 'ip link set eth1 down; ip link set eth1 up; dhcpcd -14B --noconfigure eth1'
+dhcpcd-9.4.1 starting
+DUID 00:04:2d:42:1c:92:eb:aa:e1:11:9b:80:64:31:50:34:07:e9
+eth1: waiting for carrier
+eth1: carrier acquired
+eth1: IAID f2:ec:58:38
+eth1: rebinding lease of 172.29.225.4
+eth1: leased 172.29.225.4 for 7200 seconds
+exiting due to oneshot

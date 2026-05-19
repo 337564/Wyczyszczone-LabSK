@@ -1,0 +1,14 @@
+Mapowanie nazw - Linux:
+--------------------------------------------------------------------
+
+% grep hosts: /etc/nsswitch.conf
+hosts: mymachines resolve [!UNAVAIL=return] files myhostname dns
+
+man nsswitch.conf
+
+man systemd-resolved.service
+
+man nss-resolve  nss-myhostname  nss-mymachines
+
+
+cat /etc/resolv.conf		# Link! generowany dynamicznie

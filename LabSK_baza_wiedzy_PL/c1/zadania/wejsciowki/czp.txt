@@ -1,0 +1,18 @@
+# Wejściówka c1
+# Czwartek P
+
+# Wszystkie zdania za 1p. Prosze krotkie zwiezle odpowiedzi bezposrednio pod pytaniem.
+
+1. Co to są poświadczenia i obiekty w uwierzytelnainiu ?
+
+2. Jak jest podstawowa różnica między szyfrowaniem symetryczny i niesymetrycznym ?
+
+3. Jaki jest związek pomiędzy kluczem publicznym i prywatnym ?
+
+4. Czy polecenie ssh posiada plik konfiguracyjny ? Gdzie on jest i co zawiera ?
+
+Zadania:
+
+5. Skonfigurować ssh na swojej stacji Sx aby móc logować się na maszynę m1 bez hasła
+
+6. Skonfigurować ssh na m1 aby móc logować się z niej do volta bez hasła

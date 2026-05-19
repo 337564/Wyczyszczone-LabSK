@@ -1,0 +1,70 @@
+
+stud@s5:~$ man networkctl
+
+$ networkctl list
+IDX LINK   TYPE     OPERATIONAL SETUP
+  1 lo     loopback carrier     unmanaged
+  2 eno2   ether    routable    configured
+  3 eno1   ether    off         unmanaged
+  4 wlp2s0 wlan     no-carrier  unmanaged
+  5 tun0   none     off         unmanaged
+  6 tap0   ether    off         unmanaged
+
+6 links listed.
+
+$ networkctl status
+●          State: routable
+         Address: 10.146.225.5 on eno2
+                  fe80::ea40:f2ff:feec:605e on eno2
+         Gateway: 10.146.146.3 (Intel Corporate) on eno2
+                  10.146.146.3 (Intel Corporate) on eno2
+             DNS: 10.146.146.6
+                  10.146.146.3
+  Search Domains: iem.pw.edu.pl
+             NTP: 10.146.146.3
+
+maj 18 18:01:21 s5 systemd-networkd[1105]: eno2: Gained IPv6LL
+maj 18 18:01:21 s5 systemd-networkd[1105]: Enumeration completed
+maj 18 18:01:21 s5 systemd[1]: Started Network Service.
+maj 18 18:01:21 s5 systemd-networkd[1105]: eno2: IPv6 successfully enabled
+maj 18 18:01:22 s5 systemd-networkd[1105]: eno2: DHCPv4 address 10.146.225.5/16 via 10.146.146.3
+maj 18 18:01:22 s5 systemd[1]: Starting Wait for Network to be Configured...
+maj 18 18:01:22 s5 systemd[1]: Finished Wait for Network to be Configured.
+maj 18 18:01:22 s5 systemd-networkd[1105]: wlan0: Interface name change detected, wlan0 has been renamed to wlp2s0.
+maj 18 18:01:25 s5 systemd-networkd[1105]: wlp2s0: Link UP
+
+$ networkctl lldp
+LINK             CHASSIS ID        SYSTEM NAME      CAPS        PORT ID           PORT DESCRIPTION
+eno2             b4:fb:e4:82:56:04 n/a              n/a         15                n/a
+
+1 neighbors listed.
+
+$ cat /etc/netplan/01-network-manager-all.yaml
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+
+$ cat /run/netplan/eno2.yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eno2:
+      dhcp4: true
+      dhcp-identifier: mac
+      critical: true
+      nameservers:
+        addresses: ["10.146.146.6", "10.146.146.3"]
+        search: ["iem.pw.edu.pl"]
+
+$ ifconfig eno2
+eno2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.146.225.5  netmask 255.255.0.0  broadcast 10.146.255.255
+        inet6 fe80::ea40:f2ff:feec:605e  prefixlen 64  scopeid 0x20<link>
+        ether e8:40:f2:ec:60:5e  txqueuelen 1000  (Ethernet)
+        RX packets 25015847  bytes 5145727291 (5.1 GB)
+        RX errors 0  dropped 138131  overruns 0  frame 0
+        TX packets 375478  bytes 57624164 (57.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 20  memory 0xf7e00000-f7e20000

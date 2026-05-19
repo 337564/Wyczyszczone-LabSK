@@ -1,0 +1,25 @@
+# Wejściówka c1
+# Poniedziałek 12 N
+
+# Wszystkie zdania za 1p. Proszę krótkie zwięzłe odpowiedzi bezpośrednio pod pytaniem.
+# Proszę łamać linie - linie nie dłuższe niż pytania !
+# Po odpowiedzi zostawić pustą linię na ocenę.
+
+1. Co to są poświadczenia, obiekty i uwierzytelnienie ?
+
+2. W jaki sposób znajdowane są polecenia  w systemie Linux i Windows ?
+   Jaka zmienna jest używana i co ona zawiera ?
+
+3. Opisz kroki algorytmu jakim serwer ssh uwierzytelnia użytkownika w kryptografi niesymetrycznej
+   Do czego serwer ssh używa Twojego klucza i który to jest klucz ?
+
+4. Gdzie znajduje się plik konfiguracyjny serwera ssh ?
+   Co on zawiera ?
+
+Zadania:
+
+5. Skonfigurować ssh na swojej stacji Sx na swoim koncie aby móc logować się z niej
+   z własnego konta (nie stud) na maszynę e2 bez hasła
+
+6. Skonfigurować ssh na e2 aby móc logować się do swojej stacji Sx na swoje konto
+   (nie na konto stud!) bez hasła oraz logowac się bez hasła na volta (używamy vol a nie volt!)

@@ -1,0 +1,15 @@
+stud@s2 ~ % install/termshark
+
+stud@s2 ~ % # tshark -i eth1 -Y llmnr
+Running as user "root" and group "root". This could be dangerous.
+Capturing on 'eth1'
+  558 0.838692327 fe80::ea40:f2ff:feec:6150 ? ff02::1:3    LLMNR 83 Standard query 0x3490 AAAA log
+  559 0.838770963 fe80::ea40:f2ff:feec:614e ? ff02::1:3    LLMNR 83 Standard query 0x28d6 AAAA log
+  593 0.857822688 10.146.225.2 ? 224.0.0.252  LLMNR 63 Standard query 0x141a A log
+  655 0.946147985 172.29.225.2 ? 224.0.0.252  LLMNR 63 Standard query 0x355c A log
+ 1282 1.838717169 fe80::ea40:f2ff:feec:614e ? ff02::1:3    LLMNR 83 Standard query 0x28d6 AAAA log
+ 1283 1.838747371 fe80::ea40:f2ff:feec:6150 ? ff02::1:3    LLMNR 83 Standard query 0x3490 AAAA log
+ 1330 1.858079600 10.146.225.2 ? 224.0.0.252  LLMNR 63 Standard query 0x141a A log
+ 1366 1.946171332 172.29.225.2 ? 224.0.0.252  LLMNR 63 Standard query 0x355c A log
+^C
+8 packets captured

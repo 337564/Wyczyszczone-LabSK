@@ -1,0 +1,88 @@
+#!/bin/sh
+# vbmk-freebsd
+# Unix/Linux
+# Kreacja maszyny wirtualnej FreeBSD podnoszonej z obrazu ISO lub z sieci
+# ato 2015-2022
+
+# Zdalna konsola: VirtualBox Remote Desktop Extension (VRDE) :
+# https://www.virtualbox.org/manual/ch07.html
+# https://docs.oracle.com/en/virtualization/virtualbox/6.0/admin/vrde.html
+
+# Rekwizyty: skrypt iso
+
+# Zdalna konsola VRDE:
+PORT=5901
+PAS=zetis+					# Hasło VNC min. 6 znaków
+
+Set_CD () {					# Ustaw CD
+  #CPU=i386					# CPU 32 bit
+  CPU=amd64					# CPU 64 bit
+  #VER=13.1-RELEASE				# Wersja stabilna
+  VER=14.0-CURRENT				# Wersja testowa
+  CD=/pub/FreeBSD/zetis/mfs/freebsd-mfs-$VER-$CPU.iso
+}
+
+Set_CD () {					# Ustaw CD z użyciem iso
+  VER=14
+  $(iso m14) 	# NAM=m14 CD= RAM=2G		# iso -h
+}
+
+ifname_gate () {				# Nazwa interfejsu z trasą do bramki
+  case "$(uname)" in
+  FreeBSD) TODO ;;
+    Linux) ip -4 route show default | head -1 | cut -d' ' -f5 ;;
+  esac
+}
+
+# START
+
+Set_CD						# CD=
+
+RAM=2048					# Pamięć
+
+NCPU=2						# Liczba procesorów
+
+# START
+
+vbm="VBoxManage -q"
+
+VM=FreeBSD-$VER$1				# Nazwa maszyny
+
+DEV=$(ifname_gate)				# Interfejs gospodarza
+#DEV=eth0
+
+$vbm unregistervm $VM --delete 2>/dev/null	# Skasowanie maszyny
+
+set -e						# Stop po błędzie
+
+$vbm createvm --name $VM --ostype FreeBSD_64 --register
+
+$vbm modifyvm $VM --memory $RAM --cpus $NCPU --vram 7 --acpi on --hpet on --ioapic on --largepages on
+
+$vbm modifyvm $VM --vrde on --vrdeport $PORT --vrdeproperty VNCPassword="$PAS"
+
+$vbm storagectl $VM --add sata --name SATA
+$vbm storageattach $VM --storagectl SATA --port 0 --type dvddrive --medium $CD
+
+I=1						# Numer interfejsu
+$vbm modifyvm $VM --nictype$I 82545EM --nic$I intnet
+
+I=$(($I+1))					# = 2
+$vbm modifyvm $VM --nictype$I 82545EM --nic$I bridged --bridgeadapter$I $DEV --nicbootprio$I 2
+
+$vbm  modifyvm $VM --boot1 dvd			# z CD (skąd podnosimy system)
+#$vbm modifyvm $VM --boot1 net			# z sieci
+#$vbm modifyvm $VM --boot1 dvd --boot2 none --boot3 none --boot4 none	# Boot Order
+
+#$vbm modifyvm $VM --pae off			# Disable PAE/NX
+#$vbm modifyvm $VM --usb on --usbehci on	# Set USB Controller
+
+echo "wystartuj maszynę poleceniem:"
+echo "$vbm startvm $VM"
+
+echo "i podłącz się zalnie z systemu Windows do konsoli maszyny:"
+echo "mstsc /v:$(hostname).zet.pw.edu.p:$PORT"
+
+#sudo ss -4ltnp					# Weryfikacja VRDP
+#vb lv ext					# Extensions pack
+exit

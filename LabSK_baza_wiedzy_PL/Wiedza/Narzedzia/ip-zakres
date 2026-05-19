@@ -1,0 +1,60 @@
+#!/bin/sh
+# ip-zakres
+# Obliczenie parametrów sieci IPv4: min, max, liczba iterfejsów
+# ato 2021
+
+# $(( arytmetyka 64-bit )) : printf "%x\n" -1
+# Bing/Google: integer to ipv4 in shell
+
+MAX=$(( (1<<32) - 1))			  # zsh: echo $((2**32-1))
+
+usage () {
+  echo "użycie: $PROG a.b.c.d/maska"
+  exit 1
+}
+
+. ~/labsk/bin/konwersja-ip.sh	# inet_aton inet_ntoa
+
+weryfikacja () { # n max	# Weryfikacja 0 <= n <= max
+  [ $1 -eq $1 ] || exit 1	# nie liczba
+  [ $1 -ge  0 ] || exit 2	# ujemna
+  [ $1 -le $2 ] || exit 3	# zbyt duża
+}
+
+maska () { # l			# Maska dla l = długość interfejsu
+  local m			# maska interfesu
+  m=$(( (1<<$1) - 1 ))		# 1<<n = 2^n
+  echo $(( MAX ^ m ))		# xor bo 64bit
+}
+
+# START
+
+PROG=${0##*/}
+
+[ "$1" ] || usage
+
+ip=${1%/*} ; m=${1#*/}
+
+[ $ip = $m ] && usage		# Brak '/'
+
+ip=$(inet_aton $ip)		# a.b.c.d -> int
+
+weryfikacja $ip $MAX ; weryfikacja $m 32
+
+d=$(( 32 - m ))			# Długość interfejsu w bitach
+
+m=$(maska $d)		        # Obliczenie maski
+
+min=$(( (ip & m) + 1 ))		# Pierwsza maszyna
+
+n=$(( (1<<d) - 2 ))		# Liczba maszyn = 2^l - 2
+
+max=$(( min + n - 1 ))		# Ostatnia maszyna
+
+inet_ntoa $min
+echo $n
+inet_ntoa $max
+
+ipcalc $1			# Weryfikacja
+
+exit

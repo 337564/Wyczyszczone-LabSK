@@ -1,0 +1,12 @@
+# Wejściówka c1
+
+1. Skonfigurować stację sX tak aby bez hasła można było zalogować się na maszynę vol
+   2 punkty
+
+2. Skonfigurować vol tak aby bez hasła można było zalogować się Z powrotem na swoja stacje
+   serwis sshd starujemy poleceniem: systemctl start sshd 
+   2 punkty
+
+3. Załozyć na volcie katalog z1 i umieścić w nim 1-linowy plik o nazwie klucz.txt
+   zawierający oswoje klucze publiczne: ze stacji Sx i z maszyny volt
+   1 punkt

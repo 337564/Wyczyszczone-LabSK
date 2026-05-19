@@ -1,0 +1,105 @@
+% ipb -4 a
+lo               UNKNOWN        127.0.0.1/8
+eth0             UP             10.146.225.2/16 metric 100
+----------------------------------------------------------------------------------------
+% sudo dhclient -v -d  eth1
+Internet Systems Consortium DHCP Client 4.4.3
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+Listening on LPF/eth1/e8:40:f2:ec:61:50
+Sending on   LPF/eth1/e8:40:f2:ec:61:50
+Sending on   Socket/fallback
+DHCPDISCOVER on eth1 to 255.255.255.255 port 67 interval 7
+DHCPOFFER of 172.29.225.2 from 172.29.146.22
+DHCPREQUEST for 172.29.225.2 on eth1 to 255.255.255.255 port 67
+DHCPACK of 172.29.225.2 from 172.29.146.22
+/sbin/dhclient-script: line 116: hostname: command not found
+bound to 172.29.225.2 -- renewal in 3581 seconds.
+^C
+----------------------------------------------------------------------------------------
+% ipb -4 a
+eth1             UP             172.29.225.2/16
+----------------------------------------------------------------------------------------
+% sudo dhclient -v -r  eth1
+Removed stale PID file
+Internet Systems Consortium DHCP Client 4.4.3
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+Listening on LPF/eth1/e8:40:f2:ec:61:50
+Sending on   LPF/eth1/e8:40:f2:ec:61:50
+Sending on   Socket/fallback
+DHCPRELEASE of 172.29.225.2 on eth1 to 172.29.146.22 port 67
+----------------------------------------------------------------------------------------
+% ipb a
+eth1             UP             fe80::ea40:f2ff:feec:6150/64
+----------------------------------------------------------------------------------------
+% sudo dhcpcd -T eth1
+dhcpcd-9.4.1 starting
+DUID 00:04:2f:b7:ae:a8:07:ab:e1:11:9b:80:64:31:50:34:07:e9
+eth1: IAID f2:ec:61:50
+eth1: soliciting an IPv6 router
+eth1: rebinding lease of 172.29.225.2
+eth1: leased 172.29.225.2 for 7200 seconds
+interface=eth1
+pid=9846
+protocol=dhcp
+reason=TEST
+ifcarrier=up
+ifflags=69699
+ifmetric=1003
+ifmtu=1500
+ifwireless=0
+new_broadcast_address=172.29.255.255
+new_dhcp_lease_time=7200
+new_dhcp_message_type=5
+new_dhcp_server_identifier=172.29.146.22
+new_domain_name=zet.pw.edu.pl
+new_domain_name_servers='172.29.146.3 172.29.146.6'
+new_filename=ipxe
+new_host_name=s2
+new_ip_address=172.29.225.2
+new_log_servers=172.29.146.3
+new_network_number=172.29.0.0
+new_server_name=nas2
+new_subnet_cidr=16
+new_subnet_mask=255.255.0.0
+----------------------------------------------------------------------------------------
+% sudo dhcpcd -4 eth1
+dhcpcd-9.4.1 starting
+DUID 00:04:2f:b7:ae:a8:07:ab:e1:11:9b:80:64:31:50:34:07:e9
+eth1: IAID f2:ec:61:50
+eth1: rebinding lease of 172.29.225.2
+eth1: probing address 172.29.225.2/16
+eth1: leased 172.29.225.2 for 7200 seconds
+eth1: adding route to 172.29.0.0/16
+forked to background, child pid 9953
+----------------------------------------------------------------------------------------
+% ps awxl | g dhcpcd
+4  1000    8104    7466  20   0  11872  4916 do_wai S+   pts/0      0:00 man dhcpcd
+5   971    9953       1  20   0   3152  1636 -      S    ?          0:00 dhcpcd: eth1 [ip4]
+5     0    9954    9953  20   0   3172  1864 -      S    ?          0:00 dhcpcd: [privileged proxy] eth1 [ip4]
+5   971    9955    9953  20   0   3152   276 -      S    ?          0:00 dhcpcd: [control proxy] eth1 [ip4]
+5   971    9958    9954  20   0   3160   292 -      S    ?          0:00 dhcpcd: [BPF ARP] eth1 172.29.225.2
+5   971    9966    9954  20   0   3172   296 -      S    ?          0:00 dhcpcd: [network proxy] 172.29.225.2
+0  1000   10053    8760  20   0   9220  2660 pipe_r S+   pts/1      0:00 grep --color=auto dhcpcd
+----------------------------------------------------------------------------------------
+% ipb -4 addr sho dev eth1
+eth1             UP             172.29.225.2/16
+----------------------------------------------------------------------------------------
+% sudo dhcpcd -x eth1
+dhcpcd not running
+% sudo dhcpcd --exit eth1
+dhcpcd not running
+% sudo kill 9953
+----------------------------------------------------------------------------------------
+% ps awxl | g dhcpcd
+4  1000    8104    7466  20   0  11872  4916 do_wai S+   pts/0      0:00 man dhcpcd
+0  1000   10360    8760  20   0   9220  2532 -      R+   pts/1      0:00 grep --color=auto dhcpcd
+----------------------------------------------------------------------------------------
+% ipb -4 addr sho dev eth1
+eth1             UP             172.29.225.2/16
+----------------------------------------------------------------------------------------

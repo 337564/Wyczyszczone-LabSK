@@ -1,0 +1,14 @@
+LabSK c3 - wejściówka gr. pon. 10:15
+-------------------------------------
+
+1. Jak nazywa się druga warstwa modelu OSI ?
+   Jakie adresy są w niej używane ?
+
+2. Z ilu części składa się adres IPv4 ?
+   Jakie to części ?
+
+3. Wymień klasę adresów IPv4 które można używać w sieci wyizolowanej (intranet)
+
+4. Wymień dwa  monitory ruchu w sieci. W Jakim systemie operacyjnym one działają ?
+
+5. Czy na jednym interfejsie można położyć wiele różnych adresów (sieci) IP ? Jaki jest tego sens ?

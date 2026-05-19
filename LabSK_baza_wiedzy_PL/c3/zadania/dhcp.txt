@@ -1,0 +1,31 @@
+c3 - wejściówka - zadanie DHCP
+
+Zadanie wykonujemy na swojej stacji sX lub na ma maszynie wirtualnej Archlinux console
+
+Napisać skrypt "sh" o nazwie "dhcp.sh" służący do zdjęcia ruchu w protokole DHCP do pliku dhcp.pcap.
+Tylko jedna transakcja DHCP !
+Po zdjęciu ruchu wyświetlić zawartość pliku poleceniem tcpdump,
+a następnie przetransmitować samego siebie (tzn. skrypt dhcp.sh) oraz ruch
+dhcp.pcap do katalogu ~/c4 na volcie.
+Skrypt jak najkrótszy i najprostszy.
+
+	#!/bin/sh
+        # Imie Nazwisko login
+        # 1. Ile bajów zawiera informacja o adresie IPv4 którą wysyła serwer DHCP do klienta ?
+        #    Oodpowiedź... (1p)
+        # 2. Z ilu pakietów słada sie podstawowy dialog DHCP ?
+        #    Odpowiedz... (1p)
+        # Algorytm (opcjonalnie): (1p)
+        # 1.
+        # 2.
+        # ...
+
+        skrypt .... 2 jeśli jest algorytm lub 3p jeśli algorytmu brak
+
+Wskazówki:
+tcpdump-^D  (tcpdump-doc tcpdump-dhcp)
+man dhcpcd + cat /etc/dhcpcd.conf
+grep dhcpserver labsk/bin/*
+Eksperyment można wykonać w sieci wyizolowanej VMNET na maszynie wirtualnej,
+Nie będzie wtedy obcego ruchu w tej sieci.
+W przypadku sieci fizycznej na stacji potrzebny będzie odpowiedni filtr tcpdump.

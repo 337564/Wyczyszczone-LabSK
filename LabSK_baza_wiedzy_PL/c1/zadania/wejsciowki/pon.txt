@@ -1,0 +1,24 @@
+# Wejściówka c1
+# Poniedziałek N
+
+# Wszystkie zdania za 1p. Proszę krótkie zwięzłe odpowiedzi bezpośrednio pod pytaniem.
+# Proszę łamać linie - linie nie dłuższe niż pytania !
+# Po odpowiedzi zostawić pustą linię na ocenę.
+
+1. Do czego potrzebny mi jest twój klucz publiczny ?
+
+2. W jaki sposób znajdowane są polecenia  w systemie Linux i Windows ?
+   Jaka zmienna jest używana i co ona zawiera ?
+
+3. Opisz kroki algorytmu jakim serwer ssh uwierzytelnia użytkownika w kryptografi niesymetrycznej
+   Do czego serwer ssh używa Twojego klucza i który to jest klucz ?
+
+4. Gdzie znajduje się plik konfiguracyjny użytkownika programu ssh ?
+   Co on zawiera ?
+
+Zadania:
+
+5. Skonfigurować ssh na volcie aby móc logować się bez hasła na maszyne c2
+
+6. Skonfigurować ssh na c2 aby móc logować się z c2 na volta bez hasła.
+   Uwga: używamy aliasu vol a nie volt

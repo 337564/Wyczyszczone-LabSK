@@ -1,0 +1,14 @@
+LabSK c3 - wejściówka gr. wtorek 8:15
+-------------------------------------
+
+1. Jak nazywa się trzecia warstwa modelu OSI ?  Jakie adresy są w niej używane ?
+
+2. Jaka jest różnica miedzy adresacją klasową (A/B/C..) a CIDR ?
+   Ile i jakie liczby trzeba podać aby określić adres CIDR ?
+
+3. Wymień klasę adresów IPv4 które można używać w sieci wyizolowanej (intranet) z maską /15
+
+4. Wymień monitory ruchu w sieci który można używać w terminalu.
+   Jak poradzić sobie w monitorze z intensywnym ruchem sieciowym, np. ponad 10000 pakietów /sek ?
+
+5. Czy na interfejsie na którym jest już adres IPv4 można dodać dodatkowy adres ?

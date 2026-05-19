@@ -1,0 +1,17 @@
+# Powershell (pod MS-Windows!)
+# Generacja i eksport klucza publicznego do volta
+# Dokumentacja: programy: ssh ssh-keygen ssh-copy-id ; skrypt: ssh-keyexport -h (tylko volt)
+
+#ssh-keygen
+
+$login="$USERNAME"		# Poprwić jesli USERNAME inny niż login jak ma się na volcie
+
+cat $HOME/.ssh/id_rsa.pub	# test
+
+# Odpowiednik Unix-owego ssh-copy-id lub ssh-keyexport:
+cat $HOME/.ssh/id_rsa.pub | ssh "$login@volt.zet.pw.edu.pl" 'cat - >> .ssh/authorized_keys'
+
+# Weryfikacja:
+ssh "$login@volt.zet.pw.edu.pl"  # Pownien nas wpuścić bez hasła!
+
+#EoF

@@ -1,0 +1,10 @@
+LabSK  - c3 - gr. poniedz. 9 NP
+
+Na volcie dodać polecenie "ip-new-net" które skonfiguruje sieć 10.10.10/24
+pomiędzu komputerami s1 i s2
+Skrypt nie może wymagać interakcji z użytkownikiem - jest całkowicie automatyczny.
+Przykład użycia:
+   cd /tmp
+   ip-new-net
+Skrypt musi być maksymalnie prosty - minimalna liczba linii i znaków.
+zakładamy, że na stacji docelowej s1 i s2  nie posiadamy jeszcze konta - jest tylko stud/zetis

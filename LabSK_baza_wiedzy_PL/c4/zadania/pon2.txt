@@ -1,0 +1,14 @@
+LabSK c4 - gr. poniedz. 12 NP
+Zadanie za 3p.
+
+Na volcie dodać polecenie "ip-ruch-dns" które:
+ - zdalnie na stacji sX zrobi zrzut ruchu tylko protokołów: DNS i LLMNR do pliku dns+llmnr.pcap ale tylko 5 pakietów.
+ - zdalnie na stacji sX wyswietli zawartość tego pliku (dns+llmnr.pcap) w czytelnym formacie tekstowym
+ - pobierze plik dns+llmnr.pcap na volta
+ - skasuje ten plik na stacji
+Zakładamy, że sX to dowolna stacja LabSK, niekoniecznie nasza.
+Skrypt nie może wymagać interakcji z użytkownikiem - jest całkowicie automatyczny.
+Przykład użycia:
+   cd /tmp
+   ip-ruch-dns sX
+Skrypt musi być maksymalnie prosty - minimalna liczba linii i znaków !

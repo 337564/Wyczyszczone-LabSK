@@ -1,0 +1,7 @@
+# Dowód logowania się ze stacji Windos na maszynę nas bez hasła:
+
+~ > cat .ssh\id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID17sHqvB29xD+FpD9KHyX7fHTrjhHQhl+XiPqHcNVFx ato@erg
+
+~ > ssh nas2 grep erg .ssh/authorized_keys
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID17sHqvB29xD+FpD9KHyX7fHTrjhHQhl+XiPqHcNVFx ato@erg

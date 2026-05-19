@@ -1,0 +1,35 @@
+#!/bin/sh
+#ISO="/pub/Linux/Alpine/virt.iso"
+
+vb mk alp
+#vbm modifyvm alp --bridgeadapter1 eth0
+vbm modifyvm alp --nictype2 virtio --nic2 bridged --bridgeadapter2 eth1 #--nicbootprio2 1
+
+vbm storagectl alp --name "IDE" --add "IDE"
+vbm storageattach alp --storagectl "IDE" --port 0 --device 0 --type dvddrive --medium $ISO
+exit
+
+
+
+stud@s6 ~ % vb mk alp -n
+export NAM=alp iso=/pub/Linux/Alpine/standard.iso SIZ=189 # /pub/Linux/Alpine/alpine-standard-3.18.0-x86_64.iso
+VBoxManage -q setproperty machinefolder /home/stud/stud/vm
+VBoxManage -q setproperty loghistorycount 2
+vb-bootrom -q -s
+VBoxManage -q createvm --name alp --ostype Linux_64 --register
+VBoxManage -q modifyvm alp --memory 512 --cpus 2 --vram 7 --acpi on --hpet on --ioapic on --largepages on
+VBoxManage -q modifyvm alp --vrde on
+VBoxManage -q modifyvm alp --nictype1 virtio --nic1 bridged --bridgeadapter1 eth0 --nictype2 virtio --nic2 intnet --nicbootprio1 1
+VBoxManage -q storagectl alp --add sata --name SATA
+VBoxManage -q storageattach alp --storagectl SATA --port 0 --type dvddrive --medium /pub/Linux/Alpine/standard.iso
+VBoxManage -q modifyvm alp --boot1 dvd
+
+
+% vb mk alp
+export NAM=alp iso=/pub/Linux/Alpine/standard.iso SIZ=189 # /pub/Linux/Alpine/alpine-standard-3.18.0-x86_64.iso
+Virtual machine 'alp' is created and registered.
+UUID: b64dafcc-3905-487d-8c4c-fdfe22de37ae
+Settings file: '/home/stud/stud/vm/alp/alp.vbox'
+DOC user=root
+DOC1 Instalacja pełnej wersji ip: apk update; apk add iproute2
+DOC2 Instalacja NFS: apk add nfs-utils; mkdir /pub; mount -t nfs4 nas2:/mnt/z2/pub /pub

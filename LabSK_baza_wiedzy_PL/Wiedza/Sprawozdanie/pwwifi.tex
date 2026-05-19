@@ -1,0 +1,152 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{polski}
+\usepackage[utf8]{inputenc}     % niepotrzebne gdy pierwsza linia pliku to "%& --translate-file=il2-pl"
+
+\hoffset=-3.0cm                 % Mniejszy lewy margines
+\textwidth=18cm                 % szerzej
+\evensidemargin=0pt
+
+\voffset=-3cm                   % Mniejszy gorny margines
+\textheight=27cm                % szerzej wzdluz
+
+\setlength{\parindent}{0pt}             % No paragraph indentation
+\setlength{\parskip}{\medskipamount}    % Space between paragraphs
+\raggedbottom                           % bez rozciagania strony
+
+\begin{document}
+
+\title{Skrypt logujący do PWWIFI }
+
+
+\author{Mariusz Rebandel 271085}
+
+\maketitle
+
+\section{Cel}
+
+Celem zadania jest realizacja połączenia z uczelnianą siecią PWWIFI
+oraz logowanie w niej poprzez skrypt, z minimalną interakcją z użytkownikiem.
+
+
+\section{Realizacja}
+
+
+\subsection{Zależności}
+
+Skrypt w swojej pracy wykorzystuje NetworkManagera, narzędzia ip oraz
+wget.
+
+
+\subsection{Środowisko}
+
+Skrypt działa w interpreterze poleceń zsh, w systemie operacyjnym Linux.
+
+
+\subsection{Zrealizowane scenariusze}
+
+Skrypt zakłada 3 główne scenariusze
+
+
+\subsubsection{Scenariusz 1}
+
+Użytkownik nawiązał połączenie z pwwifi przy pomocy NetworkManagera
+i chce zalogować się do sieci
+\begin{enumerate}
+\item Skrypt sprawdza urządzenie sieciowe
+\item Skrypt sprawdza połączenie
+\item Pobiera login i hasło użytkownika
+\item Wysyła dane do serwera WEBAUTH
+\item Zapisuje stare ustawienia bramki sieciowej
+\item Ustawia nową bramkę sieciową
+\end{enumerate}
+
+\subsubsection{Scenariusz 2}
+
+Użytkownik nie nawiązał połączenia
+\begin{enumerate}
+\item Skrypt sprawdza urządzenie sieciowe
+\item Skrypt ustanawia nowe połączenie z siecią na wybranym lub domyślnym
+interfejsie
+\item Pobiera login i hasło użytkownika
+\item Wysyła dane do serwera WEBAUTH
+\item Zapisuje stare ustawienia bramki sieciowej
+\item Ustawia nową bramkę sieciową
+\end{enumerate}
+
+\subsubsection{Scenariusz 3}
+
+Użytkownik chce zakończyć połączenie z siecią
+\begin{enumerate}
+\item Skrypt sprawdza urządzenie sieciowe
+\item Skrypt wysyła żądanie wylogowania z sieci
+\item Skrypt odłącza interfejs
+\item Skrypt przywraca starą bramkę sieciową
+\end{enumerate}
+
+\subsection{Główne zmiany w stosunku do pierwotnej wersji}
+
+
+\subsubsection{Zmiana środowiska}
+
+Skrypt działa pod system operacyjnym Linux, zamiast pod
+FreeBSD
+
+
+\subsubsection{Zmiana programu do obsługi protokołu http(s)}
+
+Pierwotny skrypt korzystał z niestandardowego programu curl, natomiast
+ta wersja skryptu do połączeń sieciowych wykorzystuje porgram wget,
+instalowany domyślnie w wielu dystrybucjach Linuxa i systemów Unixowych.
+Dzięki możliwości wget do przesyłania danych metodą POST, można było
+go wykorzystać do logowania się w serwisie WEBAUTH. Przykładowe wywołanie:
+\begin{verbatim}
+wget --timeout=5  --post-data "$DAT" -qO- --no-check-certificate $URL
+
+\end{verbatim}
+Oznacza to, że wget wypisze dane na standardowe wyjście, nie będzie
+sprawdzał poprawności certyfikatu (ważne przy certyfikatach samopodpisanych),
+prześle serwerowi dane metodą POST zapisane w zmiennej DAT oraz na
+odpowiedź będzie czekał 5 sekund.
+
+
+\subsubsection{Zmiana obsługi interfejsów i połączeń sieciowych}
+
+Skrypt działa w oparciu o tekstową wersję menedżera NM (nmcli). Wykorzystuje
+go do sprawdzania połączeń sieciowych, zarządzaniem nimi i przypisywaniu
+ich do interfejsów. Programu ip używa do ustawień bramki sieciowej.
+
+
+\subsubsection{Zmiana w interaktywnym wczytywaniu haseł}
+
+Hasła są wczytywane poprzez program read z przełącznikiem -s, dzięki
+czemu wpisane litery nie pojawiają się w terminalu. Nie ma potrzeby
+wyłączania echo poprzez stty.
+
+
+\subsubsection{Zmiana w wyświetlaniu kolorowego tekstu}
+
+Skrypt do zmiany koloru strumienia używa kodów zdefiniowanych w ANSI.
+Po wyświetleniu kolorowego tekstu przywraca domyślne wartości. Dzięki
+temu jest w stanie wyświetlić 3 rodzaje informacji:
+\begin{itemize}
+\item Na zielono - skrypt podąża za scenariuszem
+\item Na żółto - skrypt napotkał błąd, jednak nie jest on istotny dla zadania
+\item Na czerwono - skrypt napotkał błąd, jego dalsze funkcjonowanie nie
+jest możliwe
+\end{itemize}
+
+\subsubsection{Dodatkowy scenariusz}
+
+Skrypt przewiduje dodatkowy scenariusz, w którym użytkownik nie nawiązał
+jeszcze połączenia z siecią pwwifi
+
+
+\section{Podsumowanie}
+
+Skrypt pozwala na łatwe zautomatyzowanie zadania, w tym wypadku pełnego
+połączenia z siecią pwwifi. Niestety korzystanie w nim z niestandardowych
+rozwiązań powoduje ograniczenie jego przenośności.
+\end{document}

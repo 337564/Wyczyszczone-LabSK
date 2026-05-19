@@ -1,0 +1,10 @@
+Zadanie 1
+Na maszynie volt:
+
+1. Założyć katalog bin w katalogu domowym
+
+2. W katalogu bin umieścić jedno-liniowy skrypt o nazwie ssh-kp
+   który pokazuje klucze publiczne w katalogu $HOME/.ssh
+   (tylko klucze bez innych plików)
+
+Skrypt powinien być wołany przez polecenie ssh-kp

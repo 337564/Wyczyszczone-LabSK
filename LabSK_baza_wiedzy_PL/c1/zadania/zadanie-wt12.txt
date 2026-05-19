@@ -1,0 +1,35 @@
+LabSK - c1
+Zadanie gr wtorek 12:15
+
+Pracujemy po systemem ArchLinux Gnome
+
+1. Zmienić nazwę maszyny na s<numer> przy pomocy polecenia hostnamectl
+
+2. Uruchomić serwer sshd (polecenie systemctl)
+
+----------------------------------------------------------------------------------
+
+Zadanie - oceniane - po 1p.
+
+1. Logowanie się bez hasła ze stacji na volta
+   test: ssh loginid@vol who
+
+2. Zalogować się z ich użyciem klucza typu ed25519 z volta na stacje:
+   test:  ssh .........
+
+3. Napisać skrypt ~/bin/sshd-reset resetujący klucze serwera sshd na stacji,
+   tzn. kasujący stare klucze i generujący nowe
+
+   Algorytm:
+
+   sudo systemctl stop sshd	# Stopujemy serwis
+   sudo rm /etc/ssh/*key*	# Kasujemy stare klucze serwera
+   sudo ssh-keygen -A 		# Generujemy nowe klucze serwera
+   sudo systemctl start sshd	# Startujemy serwis
+   sudo systemctl status sshd	# Sprawdzamy czy serwis
+
+4. Wykonać ponownie punkt 2.)
+   Napisać polecenie które będzie niezbędne aby 2.) ponownie działało
+
+5. Napisać polecenie scp kopiujace skrypt z p 3) na volta do katalogu ~/bin
+   Minimalna liczba znaków!

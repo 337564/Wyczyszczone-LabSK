@@ -1,0 +1,13 @@
+LabSK c3 - wejściówka gr. pon. 12:15
+-------------------------------------
+
+1. Jak nazywa się trzecia warstwa modelu OSI ?  Jakie adresy są w niej używane ?
+
+2. Co oznacza akronim CIDR ? Ile interfejsów można max. alokować w sieci o masce /30
+
+3. Wymień klasę adresów IPv4 które można używać w sieci wyizolowanej (intranet) z maską /9
+
+4. Wymień monitory ruchu w sieci który można używać w terminalu.
+   Jak poradzić sobie w monitorze z intensywnym ruchem sieciowym, np. ponad 10000 pakietów /sek ?
+
+5. Czy na jednym interfejsie możemy jednocześnie położyć adres dynamiczny przez DHCP i statyczny ręcznie ?

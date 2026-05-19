@@ -1,0 +1,17 @@
+LabSK  - c4 - gr. piątek. 12 NP
+Zadanie za 3p.
+
+Założyc włąsne konto na maszynie e4 - nie pracujemy na niej jako stud!
+
+Na maszynie e4i dodać polecenie "ruch-dns" które:
+ - zdalnie na stacji sX zrobi zrzut ruchu protokołów: DNS, i MDNS do pliku dns+mdns.pcap ale tylko 7 pakietów.
+ - zdalnie na stacji sX wyświetli zawartość tego pliku (dns.pcap) w czytelnym formacie tekstowym
+ - pobierze plik dns+mdns.pcap na e4 do katalogu domowego
+ - skasuje ten plik na stacji
+Zakładamy, że sX to dowolna stacja LabSK, niekoniecznie nasza.
+Skrypt nie może wymagać interakcji z użytkownikiem - jest całkowicie automatyczny.
+Przykład użycia:
+   cd /tmp
+   ruch-dns sX
+
+Skrypt musi być maksymalnie prosty - minimalna liczba linii i znaków !

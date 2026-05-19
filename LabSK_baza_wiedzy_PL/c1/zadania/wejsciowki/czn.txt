@@ -1,0 +1,19 @@
+# Wejściówka c1
+# Czwartek 12 NP
+
+# Wszystkie zdania za 1p. Prosze krotkie zwiezle odpowiedzi bezposrednio pod pytaniem.
+
+1. Co zawiera zmienna $PATH systemach Linux a co zmienna $env:PATH w systemie Windows ?
+
+2. Co jest ważniejsze uwieżytelnienie maszyny czy użytkownika ? Wyjaśnij.
+
+3. W jaki sposób można rozszyfrowac inforamcję zaszyfrowaną kluczem prywatnym ?
+   Gdzie się to stosuje ?
+
+4. W jaki pliku i katalogu umieszczane są klucze publiczne maszyny docelowej ssh ?
+
+Zadania:
+
+5. Skonfigurowac ssh na swojej stacji aby móc logowac sie do volta bez hasła
+
+6. Skonfigurowac ssh na volcie aby móc logowac się do nej z volta bez hasła

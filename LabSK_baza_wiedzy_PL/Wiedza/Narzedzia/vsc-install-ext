@@ -1,0 +1,9 @@
+#!/bin/sh
+# vsc-install-ext
+# ato 2024
+
+code --install-extension ms-vscode.powershell
+code --install-extension ms-vscode-remote.remote-ssh
+#code --install-extension james-yu.latex-workshop
+
+exit

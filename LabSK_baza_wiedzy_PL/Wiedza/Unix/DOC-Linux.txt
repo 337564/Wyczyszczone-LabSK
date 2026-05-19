@@ -1,0 +1,69 @@
+Sieci - Linux
+----------------------------------------------------------------
+Nazwy interfejsów:
+https://systemd.io/PREDICTABLE_INTERFACE_NAMES/
+https://github.com/systemd/systemd/blob/master/src/udev/udev-builtin-net_id.c#L20
+
+IProute2 (polecenia ip, ss, rtmon) :
+https://baturin.org/docs/iproute2/
+https://wiki.gentoo.org/wiki/Iproute2
+https://en.wikipedia.org/wiki/Iproute2
+https://www.computernetworkingnotes.com/rhce-study-guide/basic-linux-commands-for-network-testing.html
+https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/
+https://utcc.utoronto.ca/~cks/space/blog/linux/ReplacingNetstatNotBad	: Motywacja zmiany z net-tools na iproute2
+https://wiki.linuxfoundation.org/networking/iproute2
+https://sreeninet.wordpress.com/2016/05/29/macvlan-and-ipvlan/
+
+# ip
+https://www.golinuxcloud.com/linux-ip-command/
+
+Netplan (konfiguracja statyczna):
+https://netplan.io/
+https://netplan.io/design#key-goals
+http://manpages.ubuntu.com/manpages/bionic/man5/systemd.network.5.html
+/usr/share/doc/netplan/examples/
+
+Mostek (bridge):
+https://wiki.archlinux.org/index.php/Network_bridge       2020 iproute2
+https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/#bridge
+https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-libvirt-host.html#libvirt-networks-bridged
+OLD:
+https://wiki.linuxfoundation.org/networking/bridge        OLD - brctl
+http://goyalankit.com/blog/linux-bridge                   2017
+https://news.ycombinator.com/item?id=14494434             2017
+https://help.ubuntu.com/community/NetworkConnectionBridge 2016 bridge-utils
+https://help.ubuntu.com/community/KVM/Networking          2016
+https://wiki.debian.org/BridgeNetworkConnections          bridge-utils
+https://github.com/williamknows/PiTap
+
+Tunele: (IPIP, GRE, PPP, IPPP)
+https://wiki.linuxfoundation.org/networking/tunneling
+
+Wiązki (LACP, bonding):
+https://wiki.linuxfoundation.org/networking/bonding
+
+FanNetwork (kontenery):
+https://wiki.ubuntu.com/FanNetworking
+
+Network Name Spaces:
+http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/
+http://blogs.igalia.com/dpino/tag/networking/
+
+Systemd-network:
+https://wiki.archlinux.org/index.php/Systemd-networkd
+https://coreos.com/blog/intro-to-systemd-networkd/
+
+Network Manager:
+https://wiki.gnome.org/Projects/NetworkManager/
+http://help.ubuntu.com/community/NetworkManager
+http://manpages.ubuntu.com/manpages/bionic/man5/systemd.network.5.html
+https://fedoramagazine.org/networkmanager-changes-improvements/
+https://blogs.gnome.org/lkundrak/2016/04/20/networkmanager-1-2-is-here/
+https://www.hogarthuk.com/?q=node/8
+nmcli:
+https://developer.gnome.org/NetworkManager/unstable/nmcli.html
+https://fedoraproject.org/wiki/Networking/CLI
+https://blogs.gnome.org/dcbw/2015/02/16/networkmanager-for-administrators-part-1/
+
+Virtual Networking:
+https://jamielinux.com/docs/libvirt-networking-handbook/index.html

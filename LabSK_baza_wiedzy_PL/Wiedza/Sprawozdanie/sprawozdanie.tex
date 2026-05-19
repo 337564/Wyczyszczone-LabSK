@@ -1,0 +1,115 @@
+% -*- latex -*-
+% sprawozadanie-szkielet.tex
+% LabSK
+% ato 2010-2025
+
+% Wymagane pola:
+\author{Jasio Student}			% Imię Nazwisko
+\title{Laboratorium sieci komputerowych\\ćw.3 Tu temat ćwiczenia} % Temat ćwiczenia
+
+% Wymagane jest umieszczenie kompletnych źródeł sprawozdania na volcie w katalogu ~/c$n
+% z nazwą pliku głównego c$n.tex gdzie $n jest numerem ćwiczenia (np. ~/c1/c1.tex)
+% Przykładowe kopiowanie z domu na volta: scp -r c1 volt:
+% W systemie ISOD sprawozdanie musi nosić nazwę c$n.pdf i umieszczamy je w kolumnie "Sprawozdanie"
+% c$n.pdf można wygenerować na serwerze c2 poleceniem: cd ~/c$n && pdflatex -shell-escape c$n.tex
+% Pliki źródłowe *.tex i inne muszą być w formacie pl_PL.UTF-8 (echo $LANG)
+% Grafika w sprawozdaniu wyłącznie w formacie wektorowym (pdf, svg) anajlepiej bezpośrednio .drawio
+% Poza wyjątkowymi sytuacjami nie są akceptowane pliki rastrowe gif png itp.
+
+\frenchspacing                          % Bez spacji na końcu zdania.
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{polski}
+\usepackage[utf8]{inputenc}  		% Kodowanie pliku
+\usepackage{xcolor}
+
+% Rysunki:				% https://sunsite.icm.edu.pl/pub/CTAN/graphics/svg/doc/svg.pdf
+% https://www.baeldung.com/cs/latex-svg-images
+% https://tex.stackexchange.com/questions/427622/importing-diagram-from-draw-io-into-latex
+% https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex
+% https://www.learnlatex.org/en/lesson-07
+\usepackage{graphicx}			% Grafika
+\usepackage[inkscapeformat=pdf]{svg}	% .svg tylko w postaci wektorowej - nie png! .pdf/.eps/.ps/.png/.pdf_tex
+%inkscapelatex=false			%   automatically exported to PDF+LaTeX by Inkscape
+					% inkscape -D rys.svg -o rys.pdf --export-latex
+%\svgpath{{svg/}{svg/}}			% ew. katalog na rysunki gdy jest ich dużo
+%\graphicspath{ {c1} }
+
+% Cytowanie kodu i odpowiedzi komputera - pakiet lstlistnig:
+% https://ctan.org/pkg/listings
+
+% Włączanie fragmentów wydruków z terminala i kodów źródłowych (tylko kodowanie utf8)
+\usepackage{minted}			% wymaga: ● latexminted is already installed — it ships with texlive-latexextra.
+					% The binary is at /usr/bin/latexminted. extra/python-pygments
+\usepackage{listings}
+\lstdefinestyle{custom}{
+    backgroundcolor=\color{white},
+    inputencoding=utf8,
+    extendedchars=\true,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue},
+    breaklines=true,
+    basicstyle=\ttfamily\footnotesize,
+    tabsize=1,
+    escapechar='
+}
+\lstset{style=custom}
+
+% Wymiary strony:
+\hoffset=-3.0cm                         % Mniejszy lewy margines
+\textwidth=18cm                         % szerzej
+\evensidemargin=0pt
+
+\voffset=-3cm                           % Mniejszy górny margines
+\textheight=27cm                        % szerzej wzdłuż
+
+\setlength{\parindent}{0pt}             % Paragraf od początku linii
+\setlength{\parskip}{\medskipamount}    % Odstęp pomiędzy paragrafami
+\raggedbottom                           % bez rozciągania strony
+
+% Dodatkowe komendy
+\newcommand\BS{\char`\\}                % \BS == back-slash
+\newcommand\TY{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}   % \TY == większa tylda w \tt
+
+\begin{document}
+%\thispagestyle{empty}		        % bez numeracji stron
+
+Elemnty poleceń piszemy czcionką tt : {\tt ta czcionka ma stałą szerokość znaku}
+w odróżnieniu od czcionek proporcjonalnych.
+% Komentarz
+
+\begin{itemize}
+  \item lstlisting:
+  \begin{lstlisting}
+      Tu przykład kodu
+  \end{lstlisting}
+
+  \item minted:
+  \begin{minted}{java}
+      public class PrzykladKodu {
+          // Komentarz
+          public static void main(String[] args) {
+              System.out.println("Przyklad kodu w java");
+              System.out.println("Przyklad kodu w java");
+          }
+      }
+  \end{minted}
+
+  \begin{minted}{bash}
+      #!/bin/sh
+      # Coto
+      # Ktoto kiedy
+      echo 'to ja"
+  \end{minted}
+\end{itemize}
+
+  \begin{figure}[!ht]
+    \centering
+    %\def\svgwidth{\columnwidth}
+    %\includesvg[width=0.8\columnwidth]{filename}	% Plik bez rozszerzenia .svg
+	  	% width=0.2\textwidth width=15cm
+    %\caption{Opis rysunku.}
+    %\label{rys1:label}
+  \end{figure}
+
+\end{document}

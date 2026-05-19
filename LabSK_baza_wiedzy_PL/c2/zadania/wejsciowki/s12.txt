@@ -1,0 +1,15 @@
+LabSK c3 - wejściówka gr. środa 12:30
+-------------------------------------
+Jak najkrócej, jak najzwięźlej! Linie nie dłuższe niż 80 znaków!
+
+1. Z jakim adresem IPv4 mamy do czynienia gdy pole interfejsu ma wartość maksymalną tj. binarnie same jedynki ?
+
+2. Jak nazywają się i jakimi adresami operują druga i trzecia  warstwa modelu OSI ?
+
+3. Wymień klasę adresów IPv4 które można używać w sieci wyizolowanej (intranet) z maską /20.
+
+4. Czy do jednego interfejsu można przypisać adres IPv4 i IPv6 ?
+   Jaka jest relacja pomiędzy tymi adresami ?
+
+5. Wymień monitor ruchu który można używać w terminalu.
+   Wymień monitor ruchu który wymaga środowiska graficznego i działa w systemach Windows i Unix/Linux.

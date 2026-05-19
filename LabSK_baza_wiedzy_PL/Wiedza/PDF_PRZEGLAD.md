@@ -1,0 +1,75 @@
+# Przegląd PDF
+
+- `Egzamin/Przyładowe-pytania.pdf` — 3 str., tekst: 4962 znaków.
+- `Programy/Wireshark/Wireshark_Display_Filters.pdf` — 2 str., tekst: 11339 znaków.
+- `Programy/Wireshark/tcpdump.pdf` — 1 str., tekst: 4101 znaków.
+- `Sprawozdanie/przyklady/Elektronika/Cyberbezpieczeństwo - B.Ziemba.pdf` — 13 str., tekst: 11324 znaków.
+- `Sprawozdanie/przyklady/c2.pdf` — 6 str., tekst: 11368 znaków.
+- `Sprawozdanie/przyklady/pwwifi.pdf` — 3 str., tekst: 3952 znaków.
+- `Sprawozdanie/przyklady/sobinskk/c4spraw.pdf` — 5 str., tekst: 8532 znaków.
+- `Wykład/0 Wprowadzenie.pdf` — 7 str., tekst: 2444 znaków.
+- `Wykład/1a Praca w linii poleceń.pdf` — 14 str., tekst: 5762 znaków.
+- `Wykład/1b Skrypty.pdf` — 9 str., tekst: 3341 znaków.
+- `Wykład/2a Topologie.pdf` — 2 str., tekst: 212 znaków.
+- `Wykład/2b Model OSI.pdf` — 6 str., tekst: 803 znaków.
+- `Wykład/2c Adresacja.pdf` — 11 str., tekst: 4796 znaków.
+- `Wykład/3b Protokoły.pdf` — 10 str., tekst: 4802 znaków.
+- `Wykład/4 Porty Serwisy Monitorowanie.pdf` — 11 str., tekst: 3613 znaków.
+- `Wykład/5 Trasowanie.pdf` — 10 str., tekst: 2851 znaków.
+- `Wykład/6 Maszyny wirtualne.pdf` — 2 str., tekst: 243 znaków.
+- `Wykład/7 Sieci virtualne.pdf` — 8 str., tekst: 2923 znaków.
+- `Wykład/8 Serwisy.pdf` — 10 str., tekst: 3562 znaków.
+- `Wykład/9 Media transmisyjne.pdf` — 30 str., tekst: 10781 znaków.
+- `Wykład/IPv6/ipv6-privacy.pdf` — 6 str., tekst: 11159 znaków.
+- `Wykład/IPv6.pdf` — 1 str., tekst: 5231 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/cs168-2020-L1.pdf` — 61 str., tekst: 904 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/cs168-2020-L2.pdf` — 40 str., tekst: 1521 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/cs168-2020-L3-part1.pdf` — 48 str., tekst: 1176 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/cs168-2020-L3-part2.pdf` — 56 str., tekst: 1090 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/dis1.pdf` — 5 str., tekst: 6159 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/dis1_sol.pdf` — 10 str., tekst: 21965 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/dis2.pdf` — 2 str., tekst: 1259 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/dis2_DRAFT.pdf` — 3 str., tekst: 2584 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/dis2_sol.pdf` — 3 str., tekst: 2259 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/dis2_sol_DRAFT.pdf` — 4 str., tekst: 5480 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/dis5-sol.pdf` — 3 str., tekst: 5183 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/dis5.pdf` — 3 str., tekst: 4112 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/disc10.pdf` — 2 str., tekst: 2354 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/disc10sol.pdf` — 3 str., tekst: 6202 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/disc8.pdf` — 3 str., tekst: 5465 znaków.
+- `Wykład/Inne uczelnie/Berkeley/CS168/disc8sol.pdf` — 3 str., tekst: 8138 znaków.
+- `Wykład/Książki/Computer-Networking.pdf` — 856 str., tekst: 6426 znaków — długi materiał referencyjny, nieprzepisywany w całości.
+- `Wykład/Książki/TCPIP-Illustrated.pdf` — 1059 str., tekst: 10917 znaków — długi materiał referencyjny, nieprzepisywany w całości.
+- `Wykład/old/2a Adresacja.pdf` — 11 str., tekst: 4802 znaków.
+- `ZeroTier/Android.pdf` — 10 str., tekst: 1915 znaków.
+- `c4/vm-student.pdf` — 3 str., tekst: 6359 znaków.
+- `old/19/SK_Xwindows_OSX.pdf` — 3 str., tekst: 2681 znaków.
+- `old/19/c_4/Bsi_09_wykl.pdf` — 10 str., tekst: 21084 znaków.
+- `old/19/docker-projektowanie-i-wdrazanie.pdf` — 223 str., tekst: 18753 znaków — długi materiał referencyjny, nieprzepisywany w całości.
+- `old/19/kart.pdf` — 1 str., tekst: 848 znaków.
+- `old/19/sprawozdanie/c2.pdf` — 6 str., tekst: 11368 znaków.
+- `old/19/sprawozdanie/pwwifi.pdf` — 3 str., tekst: 3952 znaków.
+- `old/19/sprawozdanie/sobinskk/c4spraw.pdf` — 5 str., tekst: 8532 znaków.
+- `old/20/sprawozdanie/c2.pdf` — 6 str., tekst: 11368 znaków.
+- `old/20/sprawozdanie/pwwifi.pdf` — 3 str., tekst: 3953 znaków.
+- `old/22/Wyklad/0 Wprowadzenie.pdf` — 7 str., tekst: 2376 znaków.
+- `old/22/Wyklad/1 Praca w linii poleceń.pdf` — 14 str., tekst: 5900 znaków.
+- `old/22/Wyklad/2 Media transmisyjne.pdf` — 30 str., tekst: 10781 znaków.
+- `old/22/Wyklad/2 Physical Terminations.pdf` — 1 str., tekst: 1074 znaków.
+- `old/22/Wyklad/2 Topologie i urządzenia.pdf` — 46 str., tekst: 2211 znaków.
+- `old/22/Wyklad/3 Adresacja.pdf` — 10 str., tekst: 3917 znaków.
+- `old/22/Wyklad/3 IPv4 Multicast (karta).pdf` — 1 str., tekst: 4771 znaków.
+- `old/22/Wyklad/3 IPv4 Subnetting (karta).pdf` — 1 str., tekst: 4130 znaków.
+- `old/22/Wyklad/3 IPv6 (karta).pdf` — 1 str., tekst: 5231 znaków.
+- `old/22/Wyklad/4 Trasowanie.pdf` — 12 str., tekst: 4085 znaków.
+- `old/22/Wyklad/5 Protokoły.pdf` — 10 str., tekst: 4802 znaków.
+- `old/22/Wyklad/6 Porty Serwisy Monitorowanie.pdf` — 10 str., tekst: 3104 znaków.
+- `old/22/Wyklad/7 Sieci virtualne.pdf` — 8 str., tekst: 2923 znaków.
+- `old/22/Wyklad/7 VLANs.pdf` — 1 str., tekst: 5706 znaków.
+- `old/22/Wyklad/8 Serwisy.pdf` — 10 str., tekst: 3562 znaków.
+- `old/23/Projekty-indywidualne/NAT_projekt.pdf` — 8 str., tekst: 13541 znaków.
+- `old/23/Projekty-indywidualne/P.Płaskonka -TrueNAS.pdf` — 11 str., tekst: 28482 znaków.
+- `old/23/Projekty-indywidualne/Parawirtualizacja-FreeBSD-Szymon.Skiba.pdf` — 12 str., tekst: 32034 znaków.
+- `old/25/c2/sprawozdanie-przyklad/local.pdf` — 1 str., tekst: 1 znaków — brak sensownego tekstu z `pdftotext`, prawdopodobnie grafika/skan/diagram.
+- `old/25/c2/sprawozdanie-przyklad/vol.pdf` — 1 str., tekst: 1 znaków — brak sensownego tekstu z `pdftotext`, prawdopodobnie grafika/skan/diagram.
+- `old/25/c2/sprawozdanie-przyklad/wielo.pdf` — 1 str., tekst: 1 znaków — brak sensownego tekstu z `pdftotext`, prawdopodobnie grafika/skan/diagram.

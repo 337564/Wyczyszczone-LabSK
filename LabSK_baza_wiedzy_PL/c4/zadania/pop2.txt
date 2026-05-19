@@ -1,0 +1,18 @@
+LabSK  - c4 - gr. poniedziałek P
+Zadanie za 3p.
+
+Na swojej stacji sX napisać 2 skrypty /bin/sh
+1. vm-gen 	# kreuje maszynę w chmurze azure z parametrami jak w skrypcie vm-crate-ubuntu
+2. vm-del	# kasuje całkowicie maszynę wygenerowaną przez 1.
+
+Skrypty musza być idepodentne - tzn. można je wielokrotnie wołać - np.:
+  cd /tmp
+  vm-gen
+  vm-del
+  vm-gen
+  vm-del
+
+Wskazówka: jakie zasoby muszą być na stałe alokowane w chmurze Azure aby skrypt 1. działał
+Który skrypt dokonuje tej trwałej alokacji ?
+
+Skrypty muszą być maksymalnie proste - minimalna liczba linii i znaków !

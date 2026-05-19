@@ -1,0 +1,12 @@
+# Wejściówka c1
+
+1. Skonfigurować stację sX tak aby bez hasła można było zalogować się na maszynę m1
+    Użytkownik/hasło na niej: stud/zetis
+   2 punkty
+
+2. Skonfigurować volta tak aby bez hasła można było zalogować się maszynę m1
+   2 punkty
+
+3. Załozyć na volicie katalog c2 i umieścić w nim 1-linowy plik o nazwie z1.txt
+   zawierający klucz publiczny sesji na stacji Sx
+   1 punkt

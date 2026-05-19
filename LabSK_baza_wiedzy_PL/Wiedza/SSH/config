@@ -1,0 +1,48 @@
+# ~/.ssh/config
+# ato 2023-2026
+
+# https://github.com/settings/keys		# Repo kluczy publicznych
+# curl https://github.com/<login-id>.keys	# Pobranie kluczy
+
+# Codex auth by proxy:
+# OpenAI’s current docs say the preferred option for remote/headless use is "codex login --device-auth".
+# If you want the normal browser flow, Codex’s callback server is on localhost:1455,
+# and the documented SSH fallback is a plain SSh local port forward: ssh -L 1455:localhost:1455 user@remote
+
+#Host sX                                # ssh -L $local_port:$dest_host:$dest_port $user@$dest
+#  HostName $DNS_or_IP
+#  User $USER
+#  RequestTTY yes
+#  LocalForward 1455 localhost:1455     # Forward Codex OAuth callback from remote -> local browser
+#  ExitOnForwardFailure yes             # fail immediately if port forwarding could not be created
+#  ServerAliveInterval 30               # Optional quality-of-life (keep login SSH session from silently hanging)
+#  ServerAliveCountMax 3                #
+
+Host volt vol
+  Hostname volt.zet.pw.eu.pl
+  User $login_na_volcie
+
+Host ftp nas2 n2
+  User ato
+  # WARNING: connection is not using a post-quantum key exchange algorithm:
+  WarnWeakCrypto no
+  #ProxyCommand ssh vol -W %h:50022
+
+# Do maszyny "test" via proxy volt:
+Host v2
+  ProxyCommand ssh v1 nc %h 22
+  ForwardAgent yes
+  User stud
+
+# Stacje s1-se  s1l-sel  s1w-sew
+# Logujemy sie jako stud i bez uwierzytelniania maszyn:
+Host s? s1? s?[lw] s1?[lw]
+  User stud
+  # Bez kluczy maszyn:
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  GlobalKnownHostsFile /dev/null
+  ConnectTimeout 1
+  ControlPersist 30
+
+#EoF

@@ -1,0 +1,15 @@
+LabSK c3 - wejściówka gr. wtorek 12:15
+-------------------------------------
+Jak najkrócej, jak najzwięźlej! Linie nie dłuższe niż 80 znaków!
+
+1. Ile i jakie liczby trzeba podać aby określić adres CIDR ?
+
+2. Jak nazywa się druga warstwa modelu OSI ? Jakie adresy są w niej używane ?
+
+3. Wymień klasę adresów IPv4 które można używać w sieci wyizolowanej (intranet) z maską /10.
+
+4. Czy do jednego interfejsu można przypisać adres IPv4 i IPv6 ?
+   Jaka jest relacja pomiędzy tymi adresami ?
+
+5. Wymień monitory ruchu w sieci który można używać w terminalu.
+   Który z nich można używać w linii poleceń ?

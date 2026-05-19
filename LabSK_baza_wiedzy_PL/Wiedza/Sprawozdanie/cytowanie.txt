@@ -1,0 +1,23 @@
+
+Celem sprawozdania jest wykazanie się umiejętnością ręcznej (nie automatycznej)
+konfiguracji interfejśów w trzech systemach operacyjnych: Windows, FreeBSD i Ubuntu.
+Należy też wykazać się umiejętnością położenia drugiej warstwy (sieci) na jednym interfejsie.
+
+Raport powinien być zwięzły tj. :
+ - stan początkowy wszystkich interfejsów gospodarza i maszyn wirtualnych
+ - opracje jakie zostały wykonane
+ - stan interfesu po operacji położenia na nim adresu (tylko ten jeden interfejs)
+ - weryfikacja łączności przez polecenie ping -c2 ..... (dwa pakiety wystarczą)
+
+Proszę używać czcionki "TapeWriter tj. {\tt cytowane polenie itp }
+cytując jakiekolwiek polecenia lub wyniki które pojawiają się w terminalu.
+Jest to powszechnie przyjęty standard.
+LaTeX ma możliwość wciągania plików tekstowych (include) w formacie "verbatim = \tt"
+przy pomocy makra listnig:
+
+	\usepackae{listings}		# na początku dokumentu w deklaracjach
+
+Opis:  http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf
+
+Sprawozdanie musi zawierać schemat sieci w postaci wektorowej (nie rastrowej),
+z opisanym adresami IP położonymi na interfejsy w sieci VLAN.

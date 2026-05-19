@@ -1,0 +1,53 @@
+#!/bin/sh
+# Obsługa WiFi z linii poleceń z wykorzystaniem NetworkManager
+# Linux
+# ato 2024-2025
+
+# man nmcli
+
+# Instalacja pakietu:
+#sudo pacman -Syu --needed --noconfirm --noprogressbar  networkmanager
+yay -Syu $YAY networkmanager
+
+# Stan przed uruchomieniem serwisu:
+systemctl status NetworkManager
+nmcli
+
+# Start serwisu
+sudo systemctl start NetworkManager
+
+# Stan po starcie:
+systemctl status NetworkManager
+nmcli
+nmcli c						# Lista połączeń
+ipb l
+ipb a
+
+# Lista punktów dostępowych i sieci:
+nmcli d wifi list
+#iwlist wlan0  scanning				# Bradzo szczegółowa i długa
+
+# Podłączenie do sieci ZET
+sudo nmcli d wifi connect zet password zetis+wifi
+# Stan interfejsów po podłączeniu:
+ipb l
+ipb a sho dev wlan0 |ft
+#wlan0 UP 192.168.225.4/24 fe80::feb8:ccab:bf8e:dcd3/64
+# Stan tablicy tras:
+ipb r
+
+nmcli c						# Lista połączeń
+
+sudo nmcli c down id zet			# Odłączenie od sieci:
+nmcli c						# Lista połączeń
+ipb l
+ipb a
+
+# Ponowne dołączenie do sieci:
+sudo nmcli c up id zet
+ipb l
+ipb a
+
+#nmcli c show zet				# Bardzo szczegółowa lista parametrów połączenia
+
+exit

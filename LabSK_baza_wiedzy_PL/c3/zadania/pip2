@@ -1,0 +1,7 @@
+#!/bin/sh
+tcpdump -c2 arp host e1 2>/dev/null
+exit
+
+stud@s1 ~ % tcpdump -c2 arp host e1 2>/dev/null
+22:04:33.982317 ARP, Request who-has s1.zet.pw.edu.pl tell e1.zet.pw.edu.pl, length 46
+22:04:33.982332 ARP, Reply s1.zet.pw.edu.pl is-at 00:1e:8c:f2:6e:c5 (oui Unknown), length 28

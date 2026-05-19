@@ -1,0 +1,10 @@
+LabSK  - c3 - gr. piątek 12 Parzysta
+
+Na swojej stacji napisać polecenie "ip-arp" w /bin/sh które wygeneruje zrzut ruch sieciowgo
+*jednega* dialgou ARP sieciowego do maszyny o adresie e1
+Skrypt nie może wymagać interakcji z użytkownikiem - jest całkowicie automatyczny.
+Przykład użycia:
+   cd /tmp
+   ip-arp
+Skrypt musi być maksymalnie prosty - minimalna liczba linii i znaków.
+Na koniec skrypt musi być skopiowany na volta do katalogu ~/bin

@@ -1,0 +1,25 @@
+#!/bin/sh
+# P.Łazowski 2023
+
+# usage xprepare host user password
+
+host=$1
+#user=$2	# jest $USER
+pass=$2
+
+set -e
+
+ssh-keygen -R $host
+
+copy-user -e $host
+
+ssh $host "echo -e '$pass\n$pass' | sudo passwd $USER"		# Już jako $USER
+
+#ssh $user@$host "sudo mkdir labsk				# nie katalog ale link, user zbędny:
+ssh $host ln -s /usr/local/zetis/labsk
+
+#sudo mount nas2:/mnt/z2/pub labsk; sudo sudo-blok $user"	# To już jest
+
+ssh $host labsk/c5/grafika-na-stacji				# Raczej lokalnie niż zdalnie
+
+exit

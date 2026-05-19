@@ -1,0 +1,54 @@
+% Wstawianie rysunków wektorowych w formacie SVG - pakiet svg.
+% Handling SVG pictures in LaTeX documents.
+% https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex
+% https://tex.stackexchange.com/questions/122871/include-svg-images-with-the-svg-package
+% ato 2020
+
+% W celu zamieszczenia rysunku w postaci wektorowej SVG najlepszym rozwiązaniem
+% jest użycie pakietu svg ponieważ umożliwia on opis rysunku z użyciem formatu latex-a.
+%
+% Ponieważ pdflatex nie zna formatu SVG musi być on konwertowany do formatu PDF.
+% Pakiet svg dokonuje konwersji pliku svg na dwa pliki pdf : z grafiką i z opisem.
+% Konwersja dokonywana jest przez program inkscape który musi być zainstalowany w systemie,
+% a pdflatex musi być wywołany z opcją --shell-escape
+% Pakiet svg wymag pakietów: iftex scrbase pdftexcmds shellesc ifplatform trimspaces graphicx
+% xcolor transparent
+
+% Innym podejściem jest użycie konwertera svg -> pdf, np.:
+%   svg2pdf c2-schemat.drawio.svg c2-schemat.drawio.pdf
+% ale tracony jest opis rysunku (napisy)
+
+% PDF generowany jest poleceniem:
+%   pdflatex --shell-escape test_svg.tex
+% generowane są pomocnicze pliki i pliki robocze usuwamy:
+%   rm test_svg.aux test_svg.log c2-schemat.pdf_tex c2-schemat.pdf
+
+% Przykład:
+
+\documentclass{article}
+%\usepackage{graphicx}
+\usepackage{svg}				% wsparcie rysunków w formacie SVG
+%\usepackage[off]{svg-extract}
+%\svgsetup{clean=true}
+%\svgsetup{extractpath=/tmp}
+
+\begin{document}
+
+\begin{figure}%[http]
+  \centering
+  %\def\svgwidth{\columnwidth}
+  %\def\svgwidth{0.5\columnwidth}
+  \includesvg[width=\linewidth]{c2-schemat-drawio}	% nazwę pliku podajemy bez przyrostka .svg
+  % generowane są pomocnicze pliki: c2-schemat.pdf_tex c2-schemat.pdf
+  %\includegraphics[]{c2-schemat}
+  \caption{Schemat 1 sieci}
+\end{figure}
+
+\begin{figure}%[http]
+  \centering
+  \includesvg[width=10cm]{c2-schemat-drawio}
+  %\includesvg[width=\columnwidth]{c2-schemat-drawio}
+  \caption{Schemat 2 sieci}
+\end{figure}
+
+\end{document}

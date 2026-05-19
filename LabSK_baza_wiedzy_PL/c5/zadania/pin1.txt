@@ -1,0 +1,10 @@
+LabSK  - c5 - gr. piątek. 9 NP
+Zadanie zad 3p.
+
+Na maszynie m2 napisać skrypt gen-www który uruchomi dowolny serwer www
+na własnej maszynie w chmurze i sprawdzi, że dziła.
+Skrypt nie może wymagać interakcji z użytkownikiem - jest całkowicie automatyczny.
+Przykład użycia:
+   cd /tmp
+   gen-www
+Skrypt musi być maksymalnie prosty - minimalna liczba linii i znaków !

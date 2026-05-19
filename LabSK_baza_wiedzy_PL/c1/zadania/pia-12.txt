@@ -1,0 +1,13 @@
+# Wejściówka c1
+# Piatek 12
+
+1. Skonfigurować stację $s tak aby bez hasła można było zalogować się na maszynę m2 bez hasła
+   Każdy ma założone konto na m2 z login identycznym jak na volcie i hasłem początkowym zetis
+   2 punkty
+
+2. Skonfigurować swoje konto na m2 tak aby bez hasła można było zalogować się z m2 z powrotem na swoją stację $s
+   2 punkty
+
+3. Założyć na iswojej stacji $s katalog z1 i umieścić w nim 2-linowy plik o nazwie klucze.txt zawierający
+   klucze publiczne kolejności: z maszyny m2 i ze stacji $s
+   1 punkt

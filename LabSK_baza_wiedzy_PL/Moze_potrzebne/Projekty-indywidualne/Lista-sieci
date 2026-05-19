@@ -1,0 +1,73 @@
+
+1. Skonfigurowac i przetestowac system drukarek sieciowych
+   pod systemami Unix: FreeBSD, Ubuntu, Debian, Fedora
+   uzywany w lab. ZETiIS (SK103 + drukarka d103)
+   Drukowanie z programow: man, firefox, OpenOffice
+
+2. Konfiguracja serwera Xzephir w sieciowym systemie Xwindow.
+
+3. Instalacja i konfiguracja systemu FreeNAS. (Serwer plikowy)
+   Testy wydajnosci.
+   /ftp/pub/BSD/FreeBSD
+
+4. Instalacja i konfiguracja systemu m0n0wall. (zapora internetowa)
+   Testy wydajnosci sieci.
+   /ftp/pub/BSD/m0nowall
+
+5. Instalacja i konfiguracja systemu pfSense (zapora internetowa)
+   Testy wydajnosci sieci.
+   /ftp/pub/BSD/pfSense
+
+6. Konfiguracja systemu FreeBSD na maszynie soekris jako punktu dostepowego wifi
+   z uwiezytelnieniem WPA-personal (wspolne haslo)
+
+7. Konfiguracja systemu FreeBSD na maszynie soekris jako punktu dostepowego wifi
+   z uwiezytelnieniem WPA-corporate (oddzielne hasla uzytkownikow z serwera radius na volcie)
+
+8. Konfiguracja  systemu FreeBSD jako detektora obecnosci urzadzenia bluetooth
+   (ang. proximity detector)
+
+9. Dynamiczna konfiguracja sieci w komputerze mobilnym (laptop)
+   zawierajcym interfejsy wifi / ethernet i bluetooth (PAN).
+
+10. Instalacja i konfiguracja serwera plikowego  CIFS/SMB (samba)
+    pod systemem FreeBSD lub Linux
+
+11. Instalacja i konfiguracja serwera LDPA  (openldap)
+    pod systemem FreeBSD lub Linux
+
+12. Instalacja i konfiguracja serwera plikowego NFS v4 pod systemem FreeBSD lub Linux
+
+13. Instalacja z sieci i konfiguracja systemu ESXi 4.1 (VMware)
+
+14. Instalcja i konfiguracja systemu VirtualBox pod systemem FreeBSD
+
+15. Zarzadzanie systemem ESXi (Netware) z linii polecen z systemu MS-Windows (powershell)
+
+16. Zarzadzanie systemem ESXi (Netware) z linii polecen z systemu Linux (powershell)
+
+17. Zarzadzanie systemem ESXi (Netware) z linii polecen z systemu FreeBSD (powershell)
+
+---------------------------------------------------------------------------------------------------
+Dowolny projekty sieciowy ze strony FreeBSD:
+
+   http://www.freebsd.org/projects/ideas/
+
+Dodatkowe tematy:
+
+1. Zaporam transparentna - implementacja
+   http://www.spenneberg.com/talks/fc_bridge/img0.html
+
+2. Implementacja zeroconf aka Bonjour aka Randevouz we FreeBSD
+   net/mDNSResponder
+   http://developer.apple.com/networking/bonjour/index.html
+   http://developer.apple.com/darwin/projects/bonjour/
+
+3. Generator reguł zapory (iptables):
+   1. Zrobic port
+   http://switch.dl.sourceforge.net/sourceforge/firehol/firehol-1.159.tar.bz2
+   http://firehol.sourceforge.net
+
+4. Konfiguracja srodowiska sieciowego KDE pod FreeBSD
+
+5. Konfiguracja srodowiska  sieciowego Gnome pod FreeBSD

@@ -1,0 +1,10 @@
+LabSK  - c3 - gr. poniedz. 12 NP
+
+Na volcie dodać polecenie "ip-new-net6" które skonfiguruje sieć 2001:db8::/32
+pomiędzu komputerami s3 i s4
+Skrypt nie może wymagać interakcji z użytkownikiem - jest całkowicie automatyczny.
+Przykład użycia:
+   cd /tmp
+   ip-new-net6
+Skrypt musi być maksymalnie prosty - minimalna liczba linii i znaków.
+zakładamy, że na stacji docelowej s3 i s4  nie posiadamy jeszcze konta - jest tylko stud/zetis
