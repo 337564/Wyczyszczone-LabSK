@@ -4,13 +4,13 @@ Ten katalog zawiera materiały przydatne w wielu ćwiczeniach albo zbyt ogólne,
 
 ## Najważniejsze podkatalogi
 
-- `Praca_w_labie` — praca lokalna, praca zdalna, naprawa sieći i grafiki.
-- `Wyklady` — aktualne slajdy wykładowe oraz krótki indeks tematów.
-- `Egzamin` — przykładowe pytania egzaminacyjne przepisane do Markdown.
-- `Wireshark` — ściągi `tcpdump` i filtrów Wiresharka.
-- `IPv6` — notatki o IPv6, ULA i prywatności adresów.
-- `Sprawozdanie` — zasady pisania sprawozdań i szablony LaTeX/Markdown.
-- `Narzedzia` — skrypty PowerShell/shell użyteczne w laboratorium.
-- `Ksiazki` — duże podręczniki i dłuższe materiały referencyjne, zachowane bez przepisywania w całości.
+- [Praca_w_labie](Praca_w_labie/README.md) — praca lokalna, praca zdalna, naprawa sieći i grafiki.
+- [Wyklady](Wyklady/README.md) — aktualne slajdy wykładowe oraz krótki indeks tematów.
+- [Egzamin](Egzamin/README.md) — przykładowe pytania egzaminacyjne przepisane do Markdown.
+- [Wireshark](Wireshark/README.md) — ściągi `tcpdump` i filtrów Wiresharka.
+- [IPv6](IPv6/README.md) — notatki o IPv6, ULA i prywatności adresów.
+- [Sprawozdanie](Sprawozdanie/README.md) — zasady pisania sprawozdań i szablony LaTeX/Markdown.
+- [Narzedzia](Narzedzia/README.md) — skrypty PowerShell/shell użyteczne w laboratorium.
+- [Ksiazki](Ksiazki/README.md) — duże podręczniki i dłuższe materiały referencyjne, zachowane bez przepisywania w całości.
 
-Materiały historyczne, niepewne lub anglojęzyczne, które nie były konieczne do bieżącego kursu, są w `Moze_potrzebne`.
+Materiały historyczne, niepewne lub anglojęzyczne, które nie były konieczne do bieżącego kursu, są w [Moze_potrzebne](../Moze_potrzebne/README.md).

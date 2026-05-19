@@ -111,4 +111,4 @@ Sens zadania: połączyć SSH, skryptowanie i odczyt adresów warstwy 2 oraz 3. 
 
 - `schematy/` — zachowane diagramy i grafiki potrzebne do zrozumienia topologii.
 - `zadania/` — bieżące wejściówki i zadania.
-- `linki.md` — linki źródłowe dotyczące adresacji i warstw.
+- [linki.md](linki.md) — linki źródłowe dotyczące adresacji i warstw.
