@@ -123,4 +123,4 @@ Zapis do pliku ma przewagę nad samym wypisaniem na ekran: można wrócić do pa
 - `skrypty/dhcp-zrzut.sh` — przykład diagnostyki DHCP na Linuksie.
 - `pcap/` — zachowane przykładowe zrzuty ruchu DHCP/ICMP.
 - `zadania/` — zadania i wejściówki.
-- `linki.md` — linki do dokumentacji DHCP, Wiresharka i `tshark`.
+- [linki.md](linki.md) — linki do dokumentacji DHCP, Wiresharka i `tshark`.

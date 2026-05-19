@@ -99,7 +99,7 @@ Set-NetIPInterface -InterfaceAlias "Ethernet" -Forwarding Enabled
 
 ## Azure Linux VM
 
-Instrukcja `azure-linux-vm.md` opisuje proces:
+Instrukcja [azure-linux-vm.md](azure-linux-vm.md) opisuje proces:
 
 1. założenia Azure for Students,
 2. instalacji `az`,
@@ -112,7 +112,7 @@ Najważniejsza zasada kosztowa: po zajęciach usuwać maszynę (`az vm delete`),
 
 ## Pliki w tym katalogu
 
-- `DNS.md` — pełniejsza notatka o DNS, mDNS, LLMNR i `systemd-resolved`.
-- `azure-linux-vm.md` — instrukcja maszyny Linux w Azure.
+- [DNS.md](DNS.md) — pełniejsza notatka o DNS, mDNS, LLMNR i `systemd-resolved`.
+- [azure-linux-vm.md](azure-linux-vm.md) — instrukcja maszyny Linux w Azure.
 - `schematy/trasowanie.drawio` — diagram trasowania.
 - `materialy/` — zrzuty i przykłady diagnostyczne.
