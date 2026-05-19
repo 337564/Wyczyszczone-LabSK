@@ -1,7 +1,7 @@
 ﻿<#
 .Synopsis
-    Relizacja pierszych kroków ćwiczenia c1 LabSK na komputerze domowym
-    w systemie operacyjnyim Windows.
+    Realizacja pierwszych kroków ćwiczenia c1 LabSK na komputerze domowym
+    w systemie operacyjnym Windows.
 .Description
     Skrypt musi być wykonany w administracyjnej konsoli PowerShell-a:
     Set-ExecutionPolicy Bypass -Scope Process -Force
@@ -32,11 +32,11 @@ ssh-keygen
 
 cat "$HOME/.ssh/id_rsa.pub" | ssh $volt 'mkdir .ssh ; cat >> .ssh/authorized_keys'
 
-# 3. Założenia katalogu roboczego i przejscie do niego
+# 3. Założenie katalogu roboczego i przejście do niego
 
 mkdir $LabSK ; cd $LabSK
 
-# 4. Skopiowanie skryptów PowerShell-ainstlacji choco vbox-a:
+# 4. Skopiowanie skryptów PowerShell-a i instalacji choco/vbox:
 
 #scp "${volt}:labsk/c1*.ps1" .           # Pobranie plików
 
@@ -45,7 +45,7 @@ mkdir $LabSK ; cd $LabSK
 $LABSK = '\\nas2\labsk'
 $env:path += "$labsk\bin;$labsk\bin\install"
 
-#bin\install\choco.ps1               # Instalacja programu Chololately
+#bin\install\choco.ps1               # Instalacja programu Chocolatey
 #bin\install\vboxa.ps1               # Instalacja programu VirtualBox
 # Teraz jest już winget:
 winget install VirtualBox

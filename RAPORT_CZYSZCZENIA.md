@@ -20,11 +20,11 @@ Usunięto lub nie przeniesiono do czystej bazy:
 ## Jak pogrupowano materiały
 
 - `c1` — materiały o terminalu, SSH, kluczach, pracy lokalnej/zdalnej i podstawach Uniksa.
-- `c2` — materiały o modelu OSI, interfejsach, MAC, IPv4/IPv6, CIDR i analizie sieći.
+- `c2` — materiały o modelu OSI, interfejsach, MAC, IPv4/IPv6, CIDR i analizie sieci.
 - `c3` — DHCP, ARP, ICMP, IPv6 oraz zrzuty ruchu; zachowano pliki `.pcap`/`.pcapng` jako dane ćwiczeniowe.
 - `c4` — DNS, mDNS, LLMNR, NBNS, trasowanie, przekazywanie pakietów i instrukcja Azure Linux VM.
 - `c5` — VPS, chmura, sieć ADM, ZeroTier/Tailscale i automatyzacja skryptami.
-- `c6` — zapory, Docker/Incus, usługi w chmurze i podłączanie serwera do sieći wirtualnej.
+- `c6` — zapory, Docker/Incus, usługi w chmurze i podłączanie serwera do sieci wirtualnej.
 - `Wiedza` — wykłady, ściągi, praca w labie, Wireshark, IPv6, sprawozdania, skrypty i książki.
 - `Moze_potrzebne` — projekty indywidualne, materiały anglojęzyczne/akademickie z Berkeley, dokumenty Office oraz pliki o niepewnym przypisaniu.
 
@@ -32,7 +32,7 @@ Usunięto lub nie przeniesiono do czystej bazy:
 
 Scalono i przepisano do spójnych notatek:
 
-- `c1/Cel-ćwiczenia.txt`, `c1/Plan-pracy.txt`, `c1/Pytania*.txt`, `c1/Unix-podstawy.txt`, `Praca-lokalna.txt`, `Praca-zdalna.txt`, `Reperacja-sieći.txt`, `Reperacja-grafiki.txt` → `c1/README.md` i `Wiedza/Praca_w_labie/README.md`.
+- `c1/Cel-ćwiczenia.txt`, `c1/Plan-pracy.txt`, `c1/Pytania*.txt`, `c1/Unix-podstawy.txt`, `Praca-lokalna.txt`, `Praca-zdalna.txt`, `Reperacja-sieci.txt`, `Reperacja-grafiki.txt` → `c1/README.md` i `Wiedza/Praca_w_labie/README.md`.
 - `c2/Cel-ćwiczenia.txt`, `c2/Pytania.txt`, `c2/c2-zadanie.txt` oraz wybrane diagramy z `old/25/c2` → `c2/README.md`.
 - `c3/Cel-ćwiczenia.txt`, `c3/Pytania.txt`, skrypty `arp-zrzut`, `dhcp-zrzut` i materiały DHCP → `c3/README.md` z zachowaniem skryptów i zrzutów.
 - `c4/Cel-ćwiczenia.txt`, `c4/DNS.md`, `c4/Przekazywanie-Linux.txt`, `c4/mDNS*.txt`, `c4/vm-student.md` → `c4/README.md`, `c4/DNS.md`, `c4/azure-linux-vm.md`.
@@ -52,7 +52,7 @@ Scalono i przepisano do spójnych notatek:
 Zastąpiono lub dopisano wyjaśnienia tam, gdzie w materiałach były same pytania typu „dlaczego?” bez odpowiedzi:
 
 - `Praca-zdalna.txt`: wyjaśniono, dlaczego po skopiowaniu konta można logować się bez `user@` — SSH używa bieżącej nazwy użytkownika.
-- `Praca-zdalna.txt`: wyjaśniono, dlaczego z domu potrzebny jest ZeroTier ZET — stacje są w prywatnej sieći i wymagają sieći nakładkowej.
+- `Praca-zdalna.txt`: wyjaśniono, dlaczego z domu potrzebny jest ZeroTier ZET — stacje są w prywatnej sieci i wymagają sieci nakładkowej.
 - `c4/Przekazywanie-Linux.txt`: dopisano wyjaśnienie, dlaczego przekazywanie pakietów jest domyślnie wyłączone — host końcowy nie powinien przypadkowo stać się routerem.
 
 Nie próbowano odpowiadać na każdą listę pytań kontrolnych jak na gotowy klucz egzaminacyjny; tam, gdzie pytania były normalnym materiałem do nauki, zachowano je albo przekształcono w notatkę pojęciową.

@@ -89,7 +89,7 @@ Serwer SSH też ma własne klucze, zwykle w `/etc/ssh/ssh_host_*`. Służą do u
 
 ### Tunel SSH
 
-Tunel SSH przekierowuje port lokalny albo zdalny przez zaszyfrowane połączenie SSH. Używa się go np. do bezpiecznego dostępu do usługi działającej tylko w sieći wewnętrznej.
+Tunel SSH przekierowuje port lokalny albo zdalny przez zaszyfrowane połączenie SSH. Używa się go np. do bezpiecznego dostępu do usługi działającej tylko w sieci wewnętrznej.
 
 Przykład lokalnego tunelu:
 
@@ -167,12 +167,12 @@ dmesg
 
 W laboratorium najczęściej pracuje się na własnym koncie skopiowanym z volta na stację `sX`. Po skopiowaniu konta można logować się bez prefiksu `user@`, jeśli nazwa użytkownika lokalnie jest taka sama jak na komputerze, z którego uruchamiasz `ssh`. SSH przy braku jawnego loginu używa bieżącej nazwy użytkownika.
 
-Z domu należy logować się bezpośrednio do stacji, a nie przez volta, jeżeli zadanie dotyczy stacji. Wymaga to działającej sieći ZeroTier ZET, ponieważ stacje laboratoryjne nie są zwykle bezpośrednio osiągalne z publicznego Internetu. ZeroTier tworzy prywatną sieć wirtualną, w której komputer domowy i stacja są w tej samej logicznej sieći.
+Z domu należy logować się bezpośrednio do stacji, a nie przez volta, jeżeli zadanie dotyczy stacji. Wymaga to działającej sieci ZeroTier ZET, ponieważ stacje laboratoryjne nie są zwykle bezpośrednio osiągalne z publicznego Internetu. ZeroTier tworzy prywatną sieć wirtualną, w której komputer domowy i stacja są w tej samej logicznej sieci.
 
 Przy problemach ze stacją użyj alternatywnych nazw i adresów:
 
-- `sX` — podstawowy interfejs w sieći `10.146/16`,
-- `sXl` — drugi interfejs w sieći `172.29/16`,
+- `sX` — podstawowy interfejs w sieci `10.146/16`,
+- `sXl` — drugi interfejs w sieci `172.29/16`,
 - `sXw` — Wi-Fi, jeżeli zostało skonfigurowane,
 - adres IPv6 link-local — wymaga dopisania strefy, np. `%eno1`, bo taki adres jest poprawny tylko na konkretnym interfejsie.
 

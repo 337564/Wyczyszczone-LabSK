@@ -15,11 +15,11 @@
 
 ## Praca zdalna
 
-Polecenie `lab` albo komunikat po logowaniu na volta pokazuje, które stacje działają i jaki mają system. Na systemach z GNOME siećią zarządza zwykle NetworkManager (`nmcli`), a na systemach konsolowych `systemd-networkd` (`networkctl`).
+Polecenie `lab` albo komunikat po logowaniu na volta pokazuje, które stacje działają i jaki mają system. Na systemach z GNOME siecią zarządza zwykle NetworkManager (`nmcli`), a na systemach konsolowych `systemd-networkd` (`networkctl`).
 
 Na stacji pracuj na własnym koncie. Po skopiowaniu konta z volta można często logować się bez `user@`, bo SSH użyje bieżącej nazwy użytkownika.
 
-Z domu loguj się bezpośrednio do stacji przez ZeroTier ZET, a nie przez volta, jeżeli wykonujesz zadanie na stacji. ZeroTier jest wymagany, bo stacje laboratoryjne są w prywatnej sieći i nie muszą być osiągalne z publicznego Internetu.
+Z domu loguj się bezpośrednio do stacji przez ZeroTier ZET, a nie przez volta, jeżeli wykonujesz zadanie na stacji. ZeroTier jest wymagany, bo stacje laboratoryjne są w prywatnej sieci i nie muszą być osiągalne z publicznego Internetu.
 
 ## Alternatywne drogi dostępu
 
@@ -31,9 +31,9 @@ Dla stacji `sX` mogą istnieć nazwy:
 
 Adres IPv6 link-local wymaga podania interfejsu, np. `%eno1`, ponieważ taki adres ma znaczenie tylko na konkretnym łączu.
 
-## Reperacja sieći `10.146/16`
+## Reperacja sieci `10.146/16`
 
-Usunięcie adresu `10.146/16` albo wyłączenie interfejsu `eth0` może zerwać SSH i dostęp do katalogów siećiowych w `$PATH`. Najpierw spróbuj dostać się przez alternatywny adres (`sXl`, Wi-Fi albo IPv6), a potem sprawdź stan:
+Usunięcie adresu `10.146/16` albo wyłączenie interfejsu `eth0` może zerwać SSH i dostęp do katalogów sieciowych w `$PATH`. Najpierw spróbuj dostać się przez alternatywny adres (`sXl`, Wi-Fi albo IPv6), a potem sprawdź stan:
 
 ```bash
 ip -br -c link

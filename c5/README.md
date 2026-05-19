@@ -2,14 +2,14 @@
 
 ## Cel ćwiczenia
 
-Ćwiczenie skupia się na skryptowej konfiguracji serwera w chmurze albo serwera lokalnego. W praktyce chodzi o umiejętność automatycznego utworzenia VPS, skonfigurowania dostępu SSH, podłączenia go do prywatnej sieći administracyjnej i uruchomienia prostej usługi.
+Ćwiczenie skupia się na skryptowej konfiguracji serwera w chmurze albo serwera lokalnego. W praktyce chodzi o umiejętność automatycznego utworzenia VPS, skonfigurowania dostępu SSH, podłączenia go do prywatnej sieci administracyjnej i uruchomienia prostej usługi.
 
 Zakres:
 
 - utworzenie VPS w chmurze,
 - konfiguracja użytkownika, powłoki i `~/bin`,
 - instalacja narzędzi pomocniczych,
-- podłączenie do ZeroTier, Tailscale albo podobnej sieći prywatnej,
+- podłączenie do ZeroTier, Tailscale albo podobnej sieci prywatnej,
 - konfiguracja nazw i adresów,
 - uruchomienie usługi, np. WWW, SMB lub NFS.
 
@@ -19,8 +19,8 @@ Zadanie przewiduje napisanie czterech prostych skryptów w `/bin/sh`:
 
 1. `gen-vps` — tworzy nowy minimalny serwer VPS z publicznym adresem IP i nazwą DNS.
 2. `config-vps` — wykonuje podstawową konfigurację konta i narzędzi na VPS.
-3. `install-adm` — instaluje klienta sieći administracyjnej na stacji i VPS.
-4. `config-adm` — dołącza stację, VPS i opcjonalny laptop do prywatnej sieći ADM.
+3. `install-adm` — instaluje klienta sieci administracyjnej na stacji i VPS.
+4. `config-adm` — dołącza stację, VPS i opcjonalny laptop do prywatnej sieci ADM.
 
 Skrypty mają być maksymalnie proste, automatyczne i nie powinny wymagać interakcji.
 
@@ -48,13 +48,13 @@ ssh vps < ./install-adm
 ssh vps < ./config-adm
 ```
 
-## Nazwy w sieći ADM
+## Nazwy w sieci ADM
 
 W materiałach pojawia się konwencja:
 
 - `vps` — publiczny adres serwera,
-- `vps.adm` — adres serwera w sieći prywatnej,
-- `sX.adm` — stacja laboratoryjna w sieći prywatnej,
+- `vps.adm` — adres serwera w sieci prywatnej,
+- `sX.adm` — stacja laboratoryjna w sieci prywatnej,
 - `lap.adm` — laptop, jeśli jest dołączony.
 
 Po wykonaniu skryptów powinny działać m.in.:
@@ -85,6 +85,6 @@ gcloud compute instances list
 
 ## Pliki w tym katalogu
 
-- `schematy/ADM.drawio` — schemat sieći administracyjnej.
+- `schematy/ADM.drawio` — schemat sieci administracyjnej.
 - [zadania/](zadania/) — zachowane wersje zadania z grup.
 - [materialy/google-cloud.md](materialy/google-cloud.md) — analogie `az` ↔ `gcloud`.
