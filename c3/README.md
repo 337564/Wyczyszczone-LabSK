@@ -119,8 +119,8 @@ Zapis do pliku ma przewagę nad samym wypisaniem na ekran: można wrócić do pa
 
 ## Pliki w tym katalogu
 
-- `skrypty/arp-zrzut.sh` — przykład wymuszenia i obserwacji ARP.
-- `skrypty/dhcp-zrzut.sh` — przykład diagnostyki DHCP na Linuksie.
+- [skrypty/arp-zrzut.sh](skrypty/arp-zrzut.sh) — przykład wymuszenia i obserwacji ARP.
+- [skrypty/dhcp-zrzut.sh](skrypty/dhcp-zrzut.sh) — przykład diagnostyki DHCP na Linuksie.
 - `pcap/` — zachowane przykładowe zrzuty ruchu DHCP/ICMP.
 - `zadania/` — zadania i wejściówki.
 - [linki.md](linki.md) — linki do dokumentacji DHCP, Wiresharka i `tshark`.
