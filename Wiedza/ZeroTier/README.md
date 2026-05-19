@@ -1,3 +1,14 @@
 # ZeroTier
 
-Materiały ogólne przeniesione z oryginalnego katalogu `ZeroTier`. Linki `.url` zebrano w `linki.md`; pliki tekstowe, obrazy i diagramy zachowano, jeżeli zawierały wiedzę lub były potrzebne jako załączniki.
+## Zawartość katalogu
+
+- [Android](Android)
+- [Android.pdf](Android.pdf)
+- [Documentation](Documentation)
+- [Documentation.html](Documentation.html)
+- [PodĹÄcz siÄ do sieci ZET.PNG](PodĹÄcz siÄ do sieci ZET.PNG)
+- [ZET.id](ZET.id)
+- [linki.md](linki.md)
+- [zerotier.labsk](zerotier.labsk)
+
+Katalog zawiera materiały źródłowe i pomocnicze używane na laboratoriach.

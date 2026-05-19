@@ -1,3 +1,9 @@
 # Unix
 
-Materiały ogólne przeniesione z oryginalnego katalogu `Unix`. Linki `.url` zebrano w `linki.md`; pliki tekstowe, obrazy i diagramy zachowano, jeżeli zawierały wiedzę lub były potrzebne jako załączniki.
+## Zawartość katalogu
+
+- [DOC-FreeBSD.txt](DOC-FreeBSD.txt)
+- [DOC-Linux.txt](DOC-Linux.txt)
+- [linki.md](linki.md)
+
+Katalog zawiera materiały źródłowe i pomocnicze używane na laboratoriach.

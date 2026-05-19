@@ -1,3 +1,7 @@
 # WiFi
 
-Materiały ogólne przeniesione z oryginalnego katalogu `WiFi`. Linki `.url` zebrano w `linki.md`; pliki tekstowe, obrazy i diagramy zachowano, jeżeli zawierały wiedzę lub były potrzebne jako załączniki.
+## Zawartość katalogu
+
+- [linki.md](linki.md)
+
+Katalog zawiera materiały źródłowe i pomocnicze używane na laboratoriach.

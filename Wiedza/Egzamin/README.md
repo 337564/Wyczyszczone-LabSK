@@ -1,5 +1,7 @@
 # Przykładowe pytania egzaminacyjne
 
-Pytania zostały przepisane z PDF i uporządkowane jako materiał do powtórki. Oryginał był 3-stronicowym PDF-em z pytaniami.
+W katalogu zachowano oryginalny plik PDF z pytaniami egzaminacyjnymi:
 
-Nie udało się automatycznie przepisać pytań, zachowano oryginalny PDF.
+- [oryginal-Przykladowe-pytania.pdf](oryginal-Przykladowe-pytania.pdf)
+
+Nie tworzono osobnej transkrypcji pytań w Markdown; aktualnym źródłem pozostaje powyższy PDF.
